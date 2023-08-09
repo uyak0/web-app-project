@@ -18,5 +18,10 @@ namespace Web_App_Project
         {
 
         }
+
+        protected void tableNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
