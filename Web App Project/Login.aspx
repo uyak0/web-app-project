@@ -4,20 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>PineEats Ordering</title>
+    <link rel="stylesheet" href="main.css"/>
+    <title>Drinkables Ordering</title>
 </head>
 <body class="grid">
     <form id="form1" runat="server">
         <div class="main">
-            <center><h1>Welcome to PineDrinks</h1></center>
+            <center><h1>Welcome to Drinkables</h1></center>
             <table>
                 <tr>
                     <td class="first-column"><label><b>Table No: </b></label></td>
                     <td><asp:TextBox ID="tableNo" runat="server" OnTextChanged="tableNo_TextChanged"></asp:TextBox></td>
                 </tr>
                 <tr class="orderBtn">
-                   <td class="first-column"></td>
-                   <td><asp:Button ID="startOrder" runat="server" OnClick="Button1_Click" Text="Start Ordering" Width="120px" /></td>
+                    <td class="first-column"></td>
+                    <td><asp:Button ID="startOrder" runat="server" OnClick="startOrderBtn" Text="Start Ordering" Width="120px" /></td>
                 </tr>
             </table>
         </div>
@@ -26,27 +27,26 @@
 </html>
 
 <style>
-    html {
-        margin: 0px;
-        width: 100%;
-        height: 100%;
-        background-color: #1A1110;
-        color: #1A1110;
-        font-family: 'Century Gothic' ;
-    }
-
     .grid {
+        margin: 0px 0px 0px 0px;
         display: grid;
         place-items: center;
         min-height: 100%;
+        min-height: 100%;
+        background-image: linear-gradient(to bottom, rgba(20, 20, 40, 0.6), rgba(25, 30, 50, 0.5)), 
+                          url("Assets/somerandomcocktail.png") ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
     }
 
     .main {
-        background-color: aliceblue;
+        background-color: rgba(240, 248, 255, 0.5);
         padding: 0px 15px 15px 15px;
-        border: solid aliceblue;
+        border: 1px solid rgba(240, 248, 255, 0);
         border-radius: 15px;
-        height: 139px;
+        height: auto;
     }
 
     .orderBtn {
@@ -62,5 +62,4 @@
     .first-column {
         width: 160px;
     }
-
 </style>

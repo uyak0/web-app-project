@@ -14,9 +14,9 @@ namespace Web_App_Project
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void startOrderBtn(object sender, EventArgs e)
         {
-
+            Response.Redirect("Home.aspx");
         }
 
         protected void tableNo_TextChanged(object sender, EventArgs e)
