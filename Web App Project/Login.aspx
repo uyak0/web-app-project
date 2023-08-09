@@ -10,17 +10,15 @@
     <form id="form1" runat="server">
         <div class="main">
             <center><h1>Welcome to PineDrinks</h1></center>
-            <table class="auto-style2">
+            <table>
                 <tr>
-                    <td class="auto-style1"><label><b>Table No: </b></label></td>
+                    <td class="first-column"><label><b>Table No: </b></label></td>
                     <td><asp:TextBox ID="tableNo" runat="server" OnTextChanged="tableNo_TextChanged"></asp:TextBox></td>
                 </tr>
-                <tr class="empty"><td></td></tr>
                 <tr class="orderBtn">
-                   <td class="auto-style1"></td>
+                   <td class="first-column"></td>
                    <td><asp:Button ID="startOrder" runat="server" OnClick="Button1_Click" Text="Start Ordering" Width="120px" /></td>
                 </tr>
-
             </table>
         </div>
     </form>
@@ -52,6 +50,7 @@
     }
 
     .orderBtn {
+        height: 50px;
         text-align: right;
     }
     
@@ -59,10 +58,9 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .auto-style1 {
-        width: 49%;
+
+    .first-column {
+        width: 160px;
     }
-    .auto-style2 {
-        width: 350px;
-    }
+
 </style>
