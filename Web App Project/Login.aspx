@@ -2,15 +2,17 @@
 
 <!DOCTYPE html>
 
+<?xml version="1.0" standalone="no"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="main.css"/>
     <title>Drinkables Ordering</title>
 </head>
 <body class="grid">
+    <img class="logo" src="Assets/drinkables-logo.png" /> 
+
     <form id="form1" runat="server">
         <div class="main">
-            <center><h1>Welcome to Drinkables</h1></center>
             <table>
                 <tr>
                     <td class="first-column"><label><b>Table No: </b></label></td>
@@ -27,6 +29,10 @@
 </html>
 
 <style>
+    .logo {
+        width: 500px;
+    }
+
     .grid {
         margin: 0px 0px 0px 0px;
         display: grid;
@@ -42,6 +48,7 @@
     }
 
     .main {
+        margin: -20em 0px 0px 0px;
         background-color: rgba(240, 248, 255, 0.5);
         padding: 0px 15px 15px 15px;
         border: 1px solid rgba(240, 248, 255, 0);
@@ -55,11 +62,10 @@
     }
     
     table {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 15px auto -10px auto;
     }
 
     .first-column {
-        width: 160px;
+        width: 5em;
     }
 </style>
