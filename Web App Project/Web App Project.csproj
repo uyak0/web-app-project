@@ -74,6 +74,7 @@
     <Content Include="Assets\somerandomcocktail.png" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
+    <Content Include="Template.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Home.aspx.cs">
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template.aspx.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template.aspx.designer.cs">
+      <DependentUpon>Template.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
