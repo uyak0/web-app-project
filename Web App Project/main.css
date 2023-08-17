@@ -9,7 +9,7 @@
 
 /* NAVBAR STYLES */
 .navbar {
-    display: flex;
+    display: flex; 
     background-color: #333;
     overflow: hidden;
     margin: 0;
