@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div class="navbar">
             <a href="Home.aspx"> Home </a>
-            <a href="Menu.aspx"> Menu</a>
+            <a href="Menu.aspx"> Menus</a> 
             <a href="Rewards.aspx"> Rewards </a>
             <a href="Account.aspx"> Account </a>
         </div>
