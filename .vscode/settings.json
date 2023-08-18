@@ -1,0 +1,3 @@
+{
+    "iis.configDir": "${workspaceFolder}\\.vs\\Web App Project\\config"
+}

@@ -5,18 +5,40 @@
 <?xml version="1.0" standalone="no"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheet" href="main.css"/>
+    <%--<link rel="stylesheet" href="main.css"/>--%>
     <title>Drinkables Ordering</title>
 </head>
 <body class="grid">
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="Home.aspx"> Home </a>
+        <a href="Menu.aspx"> Menu</a>
+        <a href="Rewards.aspx"> Rewards </a>
+        <a href="Account.aspx"> Account </a>
+    </div>
+
     <img class="logo" src="Assets/drinkables-logo.png" /> 
 
+    <!-- Main content -->
     <form id="form1" runat="server">
         <div class="main">
             <table>
                 <tr>
-                    <td class="first-column"><label><b>Table No: </b></label></td>
-                    <td><asp:TextBox ID="tableNo" runat="server" OnTextChanged="tableNo_TextChanged"></asp:TextBox></td>
+                    <td class="first-column"><label><b>Phone Number: </b></label></td>
+                    <td>
+                        <asp:TextBox ID="tableNo" runat="server" OnTextChanged="tableNo_TextChanged"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first-column"><Password><b>Password:</b></Password></td>
+                    <td style="margin-left: 40px">
+                        <asp:Login ID="Login1" runat="server" BackColor="#F7F6F3" BorderColor="#E6E2D8" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333" Height="229px" Width="366px">
+                            <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+                            <LoginButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
+                            <TextBoxStyle Font-Size="0.8em" />
+                            <TitleTextStyle BackColor="#5D7B9D" Font-Bold="True" Font-Size="0.9em" ForeColor="White" />
+                        </asp:Login>
+                    </td>
                 </tr>
                 <tr class="orderBtn">
                     <td class="first-column"></td>
@@ -28,9 +50,12 @@
 </body>
 </html>
 
-<style>
+<%--<style>
     .logo {
+        margin: 6em 0 9em 0;
         width: 500px;
+        position: relative;
+        bottom: 6em;
     }
 
     .grid {
@@ -68,4 +93,4 @@
     .first-column {
         width: 5em;
     }
-</style>
+</style>--%>
