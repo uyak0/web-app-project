@@ -80,6 +80,7 @@
     <Content Include="Home.aspx" />
     <Content Include="main.css" />
     <Content Include="Assets\somerandomcocktail.png" />
+    <Content Include="Menu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
