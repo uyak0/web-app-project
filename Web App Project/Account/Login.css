@@ -1,0 +1,23 @@
+﻿.logo {
+    margin: 6em 0 6em 0;
+    width: 500px;
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(to bottom, rgba(20, 20, 40, 0.6), rgba(25, 30, 50, 0.5)), url("Assets/somerandomcocktail.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    margin: -20em 0px 0px 0px;
+    background-color: rgba(240, 248, 255, 0.5);
+    padding: 0px 15px 15px 15px;
+    border-radius: 15px;
+    height: 116px;
+}
+
