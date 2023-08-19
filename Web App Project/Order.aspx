@@ -1,25 +1,15 @@
-﻿<<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Web_App_Project.Menu" %>
+﻿<<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Web_App_Project.Order" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link rel="stylesheet" href="main.css"/>
-    <title>Menu</title>
+    <title>Order</title>
 </head>
 <body>
 
-    <div class="Order">
-        
-        <div class="selfPickUp"> 
-            <a href="Order.aspx">Self pick up</a>
-        </div>
-
-        <div class="selfPickUp"> 
-            <a href="Order.aspx">Delivery</a>
-        </div>
-
-    </div>
+  
 
     <form id="form1" runat="server">
         <div class="navbar">

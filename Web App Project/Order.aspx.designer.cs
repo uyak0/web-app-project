@@ -11,7 +11,7 @@ namespace Web_App_Project
 {
 
 
-    public partial class Menu
+    public partial class Order
     {
 
         /// <summary>
