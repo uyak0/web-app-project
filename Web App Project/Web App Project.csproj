@@ -65,10 +65,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account\Account.css" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Login.css" />
+    <Content Include="Account\SignUp.aspx" />
+    <Content Include="Account\SignUp.css" />
+    <Content Include="App_Data\Members.mdf" />
+    <Content Include="App_Data\Members_log.ldf">
+      <DependentUpon>Members.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\drinkables-logo.png" />
-    <Content Include="Assets\drinkables-logo.svg" />
+    <Content Include="Assets\favicon-dark.png" />
+    <Content Include="Assets\favicon-light.png" />
     <Content Include="Home.aspx" />
     <Content Include="main.css" />
     <Content Include="Assets\somerandomcocktail.png" />
@@ -84,12 +92,12 @@
     <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Menu.aspx.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
+    <Compile Include="Account\SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Menu.aspx.designer.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
+    <Compile Include="Account\SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="NavBar.Master.cs">
       <DependentUpon>NavBar.Master</DependentUpon>
