@@ -12,7 +12,7 @@
     <div class="Order">
         
         <div class="selfPickUp"> 
-            <a href="Order.aspx">Self pick up</a>
+            <a href="Order.aspx">Self pick ups</a>
         </div>
 
         <div class="selfPickUp"> 
