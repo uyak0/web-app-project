@@ -6,6 +6,7 @@
 <head runat="server">
     <title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title> <!-- title -->
     <link rel="stylesheet" type="text/css" href="main.css"/> <!-- main css -->
+    <link rel="icon" type="image/x-icon" href="Assets/favicon-dark.png" /> 
     <asp:ContentPlaceHolder ID="head" runat="server"> <!-- can add scripts/css -->
     </asp:ContentPlaceHolder>
 </head>
