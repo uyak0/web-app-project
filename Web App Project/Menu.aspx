@@ -1,4 +1,4 @@
-﻿<<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Web_App_Project.Menu" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Web_App_Project.Menu" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
     <div class="Order">
         
         <div class="selfPickUp"> 
-            <a href="Order.aspx">Self pick ups</a>
+            <a href="Order.aspx">Self pick up</a>
         </div>
 
         <div class="selfPickUp"> 
