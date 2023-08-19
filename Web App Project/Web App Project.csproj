@@ -72,6 +72,7 @@
     <Content Include="Home.aspx" />
     <Content Include="main.css" />
     <Content Include="Assets\somerandomcocktail.png" />
+    <Content Include="Menu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +82,13 @@
     </Compile>
     <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="NavBar.Master.cs">
       <DependentUpon>NavBar.Master</DependentUpon>
