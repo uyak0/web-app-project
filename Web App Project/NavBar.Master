@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NavBar.Master.cs" Inherits="Web_App_Project.Account.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title> <!-- title -->
+    <link rel="stylesheet" type="text/css" href="main.css"/> <!-- main css -->
+    <asp:ContentPlaceHolder ID="head" runat="server"> <!-- can add scripts/css -->
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="../Home.aspx"> Home </a>
+            <a href="../Menu.aspx"> Menu</a>
+            <a href="../Rewards.aspx"> Rewards </a>
+            <a href="../Account.aspx"> Account </a>
+        </div>
+        <!-- Content -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
+
+
