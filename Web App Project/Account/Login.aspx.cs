@@ -17,8 +17,8 @@ namespace Web_App_Project.Account
         }
 
         protected void Login1_LoggingIn(object sender, LoginCancelEventArgs e)
-        {
-            Login1.InstructionText = String.Empty;
+        {   
+            e.Cancel = true;
         }
     }
 }

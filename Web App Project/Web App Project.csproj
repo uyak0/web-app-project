@@ -88,16 +88,6 @@
     <Content Include="Home.aspx" />
     <Content Include="main.css" />
     <Content Include="Assets\somerandomcocktail.png" />
-    <Content Include="Members.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Members.edmx</DependentUpon>
-      <LastGenOutput>Members.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Members.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Members.edmx</DependentUpon>
-      <LastGenOutput>Members.cs</LastGenOutput>
-    </Content>
     <Content Include="Menu.aspx" />
     <Content Include="Order.aspx" />
     <Content Include="Web.config" />
@@ -123,19 +113,6 @@
     </Compile>
     <Compile Include="Account\SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Member.cs">
-      <DependentUpon>Members.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Members.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Members.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Members.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Members.tt</DependentUpon>
     </Compile>
     <Compile Include="Members.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -192,6 +169,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
