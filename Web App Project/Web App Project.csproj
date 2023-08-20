@@ -78,6 +78,10 @@
     <Content Include="Account\Login.css" />
     <Content Include="Account\SignUp.aspx" />
     <Content Include="Account\SignUp.css" />
+    <Content Include="App_Data\Rewards.mdf" />
+    <Content Include="App_Data\Rewards_log.ldf">
+      <DependentUpon>Rewards.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Members.mdf" />
     <Content Include="App_Data\Members_log.ldf">
       <DependentUpon>Members.mdf</DependentUpon>
