@@ -29,6 +29,34 @@ namespace Web_App_Project
             // Perform any logic with the date, time, and address inputs
         }
 
+        protected void btnLatte_Click(object sender, EventArgs e)
+        {
+            Session["SelectedDrinks"] = "Latte";
+
+            Response.Redirect("Order.aspx");
+        }
+
+        protected void btnGreentea_Click(object sender, EventArgs e)
+        {
+            Session["SelectedDrinks"] = "Green Tea";
+
+            Response.Redirect("Order.aspx");
+        }
+
+        protected void btnFrappe_Click(object sender, EventArgs e)
+        {
+            Session["SelectedDrinks"] = "Frappe";
+
+            Response.Redirect("Order.aspx");
+        }
+
+        protected void btnvCart_Click(object sender, EventArgs e)
+        {
+            Session["SelectedDrinks"] = "Frappe";
+
+            Response.Redirect("Cart.aspx");
+        }
+
         protected void btnStartOrdering_Click(object sender, EventArgs e)
         {
             Response.Redirect("Order.aspx");

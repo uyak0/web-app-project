@@ -85,11 +85,17 @@
     <Content Include="Assets\drinkables-logo.png" />
     <Content Include="Assets\favicon-dark.png" />
     <Content Include="Assets\favicon-light.png" />
+    <Content Include="Assets\frappe.PNG" />
+    <Content Include="Assets\greentea.PNG" />
+    <Content Include="Assets\latte2.PNG" />
+    <Content Include="Assets\order.PNG" />
     <Content Include="Home.aspx" />
     <Content Include="main.css" />
     <Content Include="Assets\somerandomcocktail.png" />
     <Content Include="Menu.aspx" />
+    <Content Include="Menu.css" />
     <Content Include="Order.aspx" />
+    <Content Include="Order.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

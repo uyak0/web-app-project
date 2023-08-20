@@ -1,0 +1,79 @@
+﻿body {
+}
+
+.latte {
+    margin: 6em 0 6em 0;
+    height: 100px;
+    width: 74px;
+    position: relative;
+    top: -131px;
+    left: 194px;
+}
+
+.lattee{
+    position:relative;
+}
+
+.greentea{
+    position: relative;
+}
+
+.Frappe{
+    position:relative;
+}
+
+.lattetxt {
+    position: relative;
+    color: cornsilk;
+    
+}
+
+.teatxt {
+    position: relative;
+    color: cornsilk;
+    top: -326px;
+    left: 569px;
+    margin-top: 15px;
+}
+
+.frappetxt {
+    position: relative;
+    color: cornsilk;
+    top: -639px;
+    left: 937px;
+}
+
+#addLatte {
+    position: relative;
+    top: -43px;
+    left: 200px;
+}
+
+#addGreenTea{
+    position: relative;
+    top: -367px;
+    left:770px;
+}
+
+#addFrappe {
+    position: relative;
+    top: -680px;
+    left: 1138px;
+}
+
+#vCart {
+    display: flex; 
+   
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 43px;
+    left: -671px;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.viewCart{
+    width:100%;
+}
