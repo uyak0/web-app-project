@@ -11,34 +11,25 @@ namespace Web_App_Project
 {
 
 
-    public partial class Home
+    public partial class Test
     {
 
         /// <summary>
-        /// form1 control.
+        /// Register control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button Register;
 
         /// <summary>
-        /// BtnLogin control.
+        /// Login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnLogin;
-
-        /// <summary>
-        /// BtnOrder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnOrder;
+        protected global::System.Web.UI.WebControls.Button Login;
     }
 }

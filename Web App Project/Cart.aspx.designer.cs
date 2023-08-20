@@ -11,7 +11,7 @@ namespace Web_App_Project
 {
 
 
-    public partial class Home
+    public partial class Cart
     {
 
         /// <summary>
@@ -24,21 +24,12 @@ namespace Web_App_Project
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// BtnLogin control.
+        /// Delete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnLogin;
-
-        /// <summary>
-        /// BtnOrder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnOrder;
+        protected global::System.Web.UI.WebControls.RadioButton Delete;
     }
 }

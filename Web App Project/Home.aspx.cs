@@ -13,5 +13,15 @@ namespace Web_App_Project
         {
 
         }
+
+        protected void BtnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
+        }
+
+        protected void BtnOrder_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Menu.aspx");
+        }
     }
 }
