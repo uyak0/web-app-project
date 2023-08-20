@@ -7,12 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Web_App_Project.Account
 {
-    public partial class SignUp : System.Web.UI.Page
+    public partial class AccountPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

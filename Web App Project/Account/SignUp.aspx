@@ -9,7 +9,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="grid">
         <img class="logo" src="../Assets/drinkables-logo.png" />
-        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" BackColor="#666666" BorderColor="#E6E2D8" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" Width="350px" MembershipProvider="SqlMembershipProvider">
+        <asp:CreateUserWizard  ID="CreateUserWizard1" runat="server" BackColor="#666666" BorderColor="#E6E2D8" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" Width="350px" MembershipProvider="SqlMembershipProvider">
             <ContinueButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284775" />
             <CreateUserButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284775" />
             <TitleTextStyle BackColor="#666666" Font-Bold="True" Font-Size="Larger" ForeColor="White" />
