@@ -8,26 +8,43 @@
     <title>Menu</title>
 </head>
 <body>
-
-    <div class="Order">
-        
-        <div class="selfPickUp"> 
-            <a href="Order.aspx">Self pick up</a>
-        </div>
-
-        <div class="selfPickUp"> 
-            <a href="Order.aspx">Delivery</a>
-        </div>
-
-    </div>
+     
+   
+      
+   
 
     <form id="form1" runat="server">
+
+        
         <div class="navbar">
             <a href="Home.aspx"> Home </a>
             <a href="Menu.aspx"> Menu</a> 
             <a href="Rewards.aspx"> Rewards </a>
             <a href="Account.aspx"> Account </a>
         </div>
+
+        <div class="button-container">
+            <asp:Button ID="btnSelfPickUp" runat="server" Text="Self Pick Up" OnClick="btnSelfPickUp_Click" />
+            <asp:Button ID="btnDelivery" runat="server" Text="Delivery" OnClick="btnDelivery_Click" />
+        </div>
+
+         <div class="input-container">
+        </div>
+        <p>
+            Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged" style="margin-left: 16px" Width="273px"></asp:TextBox>
+        </p>
+        <p>
+            Pick Up date and time
+            <asp:Calendar ID="Calendar1" runat="server" Height="199px" Width="334px"></asp:Calendar>
+        </p>
+        <p>
+            Address: <asp:TextBox ID="TextBox2" runat="server" Width="379px"></asp:TextBox>
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <asp:Button ID="btnStartOrdering" runat="server" Text="Start Ordering" OnClick="btnStartOrdering_Click" Height="32px" style="margin-left: 3px" Width="158px" />
+        </p>
     </form>
 </body>
 </html>
