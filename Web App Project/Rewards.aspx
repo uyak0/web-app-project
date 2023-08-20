@@ -1,6 +1,19 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Rewards.aspx.cs" Inherits="Web_App_Project.Rewards" %>
 
 <!DOCTYPE html>
+<script runat="server">
+
+    protected void btnRegisterRedirect(object sender, EventArgs e)
+    {
+        Response.Redirect("SignUp.aspx");
+    }
+
+    protected void btnLoginRedirect(object sender, EventArgs e)
+    {
+        Response.Redirect("Login.aspx");
+    }
+</script>
+
 
 <html>
 <head runat="server">
@@ -49,8 +62,8 @@
             <p class="auto-style2">
                 Signing up is so fast and easy!</p>
             <p class="auto-style2">
-                <asp:Button ID="Register" runat="server" Text="Join Now" />
-                <asp:Button ID="Login" runat="server" Text="Sign In" />
+                <asp:Button ID="Register" runat="server" Text="Join Now" OnClick="btnRegisterRedirect"/>
+                <asp:Button ID="Login" runat="server" Text="Sign In" OnClick="btnLoginRedirect"/>
             </p>
         </div>
 
@@ -78,7 +91,7 @@
     <div style="width: 1033px"></div>
     <div style="width: 1033px"></div>
             <div style="width: 815px; height: 102px; margin-left: 217px">
-        <h1 class="auto-style1">More Drinks, Moer Points, More REWARDS</h1>
+        <h1 class="auto-style1">More Drinks, More Points, More REWARDS</h1>
                 <h1 style="color: #FFFFFF">More to come soon!</h1>
         <p class="auto-style2">
             Get a complimentary free drink on your birthday month!</p>
