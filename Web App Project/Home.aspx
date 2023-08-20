@@ -9,7 +9,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <!--CSS Grid For Homepage-->
+        <!--Nav Bar-->
+        <div class="navbar">
+            <a href="Home.aspx"> Home </a> 
+            <a href="Menu.aspx"> Menu </a> 
+            <a href="Rewards.aspx"> Rewards </a>
+            <a href="Account.aspx"> Account </a>
+        </div>
+        <!--Table Grid For Homepage-->
     <table style="width:1vh;">
         <tr style="width:1100px;height:50px">
             <td style="width:60px;text-align:center; padding:80px; background:#1077de;">
@@ -44,19 +51,12 @@ At Drinkables, we believe that every sip holds a story. So why not come and emba
             <td colspan="3">           
             </td>
         </tr>
-        <tr style="width:1vh;height=30px;">
+        <tr style="width:1vh;height:30px;">
             <td colspan="3">
 
             </td>
         </tr>
     </table>
-        l
-        <div class="navbar">
-            <a href="Home.aspx">
-            <a href="Menu.aspx"> Menu</a> 
-            <a href="Rewards.aspx"> Rewards </a>
-            <a href="Account.aspx"> Account </a>
-        </div>
     </form>
 </body>
 </html>
