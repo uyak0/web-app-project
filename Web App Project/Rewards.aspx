@@ -32,7 +32,8 @@
     padding: 10px;
     display: flex;
     align-items: center;
-  }
+        height: 150px;
+    }
   header img {
     width: 40px;
     margin-right: 10px;

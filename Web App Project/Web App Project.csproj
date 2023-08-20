@@ -90,6 +90,7 @@
     <Content Include="Assets\somerandomcocktail.png" />
     <Content Include="Menu.aspx" />
     <Content Include="Order.aspx" />
+    <Content Include="Rewards.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,13 @@
       <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rewards.aspx.cs">
+      <DependentUpon>Rewards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rewards.aspx.designer.cs">
+      <DependentUpon>Rewards.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="NavBar.Master" />
