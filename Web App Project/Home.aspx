@@ -11,10 +11,10 @@
     <form id="form1" runat="server">
         <!--Nav Bar-->
         <div class="navbar">
-            <a href="Home.aspx"> Home </a> 
-            <a href="Menu.aspx"> Menu </a> 
-            <a href="Rewards.aspx"> Rewards </a>
-            <a href="Account.aspx"> Account </a>
+            <a href="../Home.aspx"> Home </a> 
+            <a href="../Menu.aspx"> Menu </a> 
+            <a href="../Rewards.aspx"> Rewards </a>
+            <a href="../Account/Login.aspx"> Account </a>
         </div>
         <!--Table Grid For Homepage-->
     <table style="width:1vh;">

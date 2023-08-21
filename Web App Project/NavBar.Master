@@ -17,7 +17,7 @@
             <a href="../Home.aspx"> Home </a>
             <a href="../Menu.aspx"> Menu</a>
             <a href="../Rewards.aspx"> Rewards </a>
-            <a href="../Account/AccountPage.aspx"> Account </a>
+            <a href="../Account/Login.aspx"> Account </a>
         </div>
         <!-- Content -->
         <div>
