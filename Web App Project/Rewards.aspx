@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Rewards.aspx.cs" Inherits="Web_App_Project.Test" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Rewards.aspx.cs" Inherits="Web_App_Project.Rewards" %>
 
 <!DOCTYPE html>
 <script runat="server">
@@ -55,6 +55,7 @@
 <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
+<form id="form1" runat="server">
     <!-- Navbar -->
 <div class="navbar">
     <a href="../Home.aspx"> Home </a>
@@ -112,5 +113,6 @@
     </header>
     <p>If you have any questions about our rewards program, feel free to <a href="mailto:info@drinkables.com">contact us</a>.</p>
   </div>
+</form>
 </body>
 </html>
