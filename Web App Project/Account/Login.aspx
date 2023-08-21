@@ -23,9 +23,9 @@
             Height="250px" Width="350px" 
             CreateUserText="Don't have an account? Sign up now." 
             UserNameLabelText="Username: " 
-            DestinationPageUrl="~/AccountPage.aspx" 
-            CreateUserUrl="~/Account/SignUp.aspx" 
-            OnLoggingIn="Login1_LoggingIn">
+            DestinationPageUrl="~/Account/AccountPage.aspx" 
+            CreateUserUrl="~/Account/SignUp.aspx">
+            <%--OnLoggingIn="Login1_LoggingIn"--%>
 
             <InstructionTextStyle Font-Italic="True" ForeColor="Black" Font-Size="Larger" />
             <LabelStyle Font-Bold="True" CssClass="labels" />
