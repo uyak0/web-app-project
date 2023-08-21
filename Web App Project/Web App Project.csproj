@@ -94,6 +94,7 @@
     <Content Include="Assets\latte2.PNG" />
     <Content Include="Assets\order.PNG" />
     <Content Include="Home.aspx" />
+    <Content Include="Home.css" />
     <Content Include="main.css" />
     <Content Include="Assets\somerandomcocktail.png" />
     <Content Include="Menu.aspx" />

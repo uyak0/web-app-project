@@ -1,0 +1,12 @@
+﻿#cartTable table, th, td {
+    border: 2px groove blue;
+    color: #1A1110;
+    background: white;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+    #cartTable table > tr > td {
+        color: #1A1110;
+        background: white;
+        font-family: 'Bricolage Grotesque', sans-serif;
+    }
