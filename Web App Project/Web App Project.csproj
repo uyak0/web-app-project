@@ -78,6 +78,10 @@
     <Content Include="Account\Login.css" />
     <Content Include="Account\SignUp.aspx" />
     <Content Include="Account\SignUp.css" />
+    <Content Include="App_Data\Members.mdf" />
+    <Content Include="App_Data\Members_log.ldf">
+      <DependentUpon>Members.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Menu.mdf" />
     <Content Include="App_Data\Menu_log.ldf">
       <DependentUpon>Menu.mdf</DependentUpon>
@@ -89,6 +93,7 @@
     <Content Include="Assets\greentea.PNG" />
     <Content Include="Assets\latte2.PNG" />
     <Content Include="Assets\order.PNG" />
+    <Content Include="Cart.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Home.css" />
     <Content Include="main.css" />
@@ -122,10 +127,12 @@
     <Compile Include="Account\SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Members.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Members.edmx</DependentUpon>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
@@ -166,13 +173,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NavBar.Master" />
-    <EntityDeploy Include="Members.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Members.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Members.edmx.diagram">
-      <DependentUpon>Members.edmx</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
