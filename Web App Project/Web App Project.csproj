@@ -74,10 +74,11 @@
     <Content Include="Account\Account.css" />
     <Content Include="Account\AccountPage.aspx" />
     <Content Include="Account\AccountPage.css" />
+    <Content Include="Account\AnonymousView.css" />
+    <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Login.css" />
     <Content Include="Account\SignUp.aspx" />
-    <Content Include="Account\SignUp.css" />
     <Content Include="App_Data\Members.mdf" />
     <Content Include="App_Data\Members_log.ldf">
       <DependentUpon>Members.mdf</DependentUpon>
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="Account\AccountPage.aspx.designer.cs">
       <DependentUpon>AccountPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

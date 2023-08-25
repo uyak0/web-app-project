@@ -4,7 +4,6 @@
 </asp:Content>
 <asp:Content ID="scripts" ContentPlaceHolderID="head" runat="server">
     <link href="Account.css" rel="stylesheet" />
-    <link href="SignUp.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="grid">

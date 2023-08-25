@@ -1,4 +1,8 @@
-﻿.info {
+﻿:root {
+    --circleSize: 125px;
+}
+
+.info {
     color: aliceblue;
     position: fixed;
     height: 100%;
@@ -20,8 +24,6 @@
 }
 
 .profile-icon-wrapper {
-    --circleSize: 125px;
-
     width: var(--circleSize);
     height: var(--circleSize);
     border-radius: 50%;
@@ -32,7 +34,7 @@
 }
 
 #profile-icon {
-    padding: 1em 0 0 1em;
+    padding: 0.8em 0 0 1em;
     width: 100px;
     height: 100px;
 }
@@ -41,3 +43,54 @@
     padding: 1.85em 0 0 4em;
     flex-grow: 1;
 }
+
+.item {
+    display: flex;
+    height: 4em;
+    border-bottom: solid;
+    border-bottom-color: darkslategrey;
+    border-width: 2px;
+}
+
+/*The arrow thing on the right*/
+.marker {
+    position: fixed;
+    padding: 1.2em 0 0 595px;
+    float: right;
+    width: 20px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.marker::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-right: 2px solid #434343;
+    border-top: 2px solid #434343;
+    transform: rotate(45deg) translate(-20px, 20px);
+}
+/*-------------------------*/
+
+.item a {
+    font-size: larger;
+    padding-top: 1em;
+    padding-left: 1em;
+    width: 100%;
+    display: block;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+item a:first-line {
+    margin-top: 1em;
+}
+
+.item a:hover {
+    background-color: #b6b6b6;
+    color: black;
+}
+
