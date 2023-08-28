@@ -13,11 +13,16 @@
             <asp:LoginView ID="LoginView1" runat="server">
                 <%-- Anonymous View --%>
                 <AnonymousTemplate>
+                    <img class="logo" src="../Assets/drinkables-logo.png" />
                     <div class="anonymous">
-                        <a href="SignUp.aspx"> Sign Up </a>
-                        or 
-                        <a href="Login.aspx"> Login </a> 
-                        now to enjoy members benefits!
+                        <a class="btn" href="SignUp.aspx">
+                            Sign Up
+                        </a>
+                        <div> or </div> 
+                        <a class="btn" href="Login.aspx">
+                            Login
+                        </a>
+                        <div> now to enjoy member benefits! </div>
                     </div>
                 </AnonymousTemplate>
 
@@ -29,7 +34,7 @@
                         </div>
                         <div class="data">
                             <h1><asp:LoginName ID="LoginName1" runat="server" /></h1>
-                            <h3><%=GetEmail()%></h3>
+                            <%=GetEmail()%>
                         </div>
                     </div>
                     <div class="item">
