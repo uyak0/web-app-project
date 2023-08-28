@@ -1,4 +1,34 @@
-﻿body {
+﻿.logo {
+    margin: 6em 0 6em 0;
+    width: 500px;
+    position: relative;
+    top: -9px;
+    left: 441px;
+}
+
+.lattee {
+    position: relative;
+    height: 227px;
+    width: 228px;
+    margin-top: 0px;
+}
+
+.Frappe {
+    position: relative;
+    height: 227px;
+    width: 228px;
+    top: -634px;
+    left: 939px;
+    margin-top: 1px;
+}
+
+.greentea {
+    position: relative;
+    height: 227px;
+    width: 228px;
+    top: -327px;
+    left: 569px;
+    margin-top: 0px;
 }
 
 .latte {
@@ -10,22 +40,9 @@
     left: 194px;
 }
 
-.lattee{
-    position:relative;
-}
-
-.greentea{
-    position: relative;
-}
-
-.Frappe{
-    position:relative;
-}
-
 .lattetxt {
     position: relative;
     color: cornsilk;
-    
 }
 
 .teatxt {
@@ -43,27 +60,26 @@
     left: 937px;
 }
 
-#addLatte {
+#ContentPlaceHolder1_addLatte {
     position: relative;
     top: -43px;
     left: 200px;
 }
 
-#addGreenTea{
+#ContentPlaceHolder1_addGreenTea {
     position: relative;
     top: -367px;
-    left:770px;
+    left: 770px;
 }
 
-#addFrappe {
+#ContentPlaceHolder1_addFrappe {
     position: relative;
     top: -680px;
     left: 1138px;
 }
 
-#vCart {
-    display: flex; 
-   
+#ContentPlaceHolder1_vCart {
+    display: flex;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -71,7 +87,6 @@
     left: -671px;
     justify-content: center;
     width: 100%;
-
 }
 
 .viewCart{
