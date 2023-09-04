@@ -74,10 +74,15 @@
     <Content Include="Account\Account.css" />
     <Content Include="Account\AccountPage.aspx" />
     <Content Include="Account\AccountPage.css" />
+    <Content Include="Account\AnonymousView.css" />
+    <Content Include="Account\ChangePassword.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Login.css" />
     <Content Include="Account\SignUp.aspx" />
-    <Content Include="Account\SignUp.css" />
+    <Content Include="App_Data\Members.mdf" />
+    <Content Include="App_Data\Members_log.ldf">
+      <DependentUpon>Members.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Menu.mdf" />
     <Content Include="App_Data\Menu_log.ldf">
       <DependentUpon>Menu.mdf</DependentUpon>
@@ -96,10 +101,12 @@
     <Content Include="main.css" />
     <Content Include="Assets\somerandomcocktail.png" />
     <Content Include="Menu.aspx" />
+    <Content Include="Menu1.aspx" />
     <Content Include="Menu.css" />
     <Content Include="Order.aspx" />
     <Content Include="Order.css" />
     <Content Include="Rewards.aspx" />
+    <Content Include="Rewards.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +116,13 @@
     </Compile>
     <Compile Include="Account\AccountPage.aspx.designer.cs">
       <DependentUpon>AccountPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -131,10 +145,12 @@
     <Compile Include="Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Members.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Members.edmx</DependentUpon>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
@@ -143,19 +159,19 @@
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Menu1.aspx.cs">
+      <DependentUpon>Menu1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu1.aspx.designer.cs">
+      <DependentUpon>Menu1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NavBar.Master.cs">
       <DependentUpon>NavBar.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="NavBar.Master.designer.cs">
       <DependentUpon>NavBar.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Order.aspx.cs">
       <DependentUpon>Order.aspx</DependentUpon>
@@ -175,13 +191,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="NavBar.Master" />
-    <EntityDeploy Include="Members.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Members.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Members.edmx.diagram">
-      <DependentUpon>Members.edmx</DependentUpon>
-    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

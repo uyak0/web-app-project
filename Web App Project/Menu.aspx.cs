@@ -7,13 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace Web_App_Project
 {
-    public partial class Menu : System.Web.UI.Page
+    public partial class Menu1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void btnSelfPickUp_Click(object sender, EventArgs e)
         {
             string date = Request.Form["txtDate"];
@@ -67,6 +66,4 @@ namespace Web_App_Project
 
         }
     }
-
-
 }
