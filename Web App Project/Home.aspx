@@ -18,7 +18,7 @@
             <a href="../Account/Login.aspx"> Account </a>
         </div>
         <!--Table Grid For Homepage-->
-    <table style="width:1vh;">
+    <table style="width:100%;">
         <tr style="width:1100px;height:50px">
             <td style="width:60px;text-align:center; padding:80px; background:#1077de;">
                 <!--Inserting Logo-->

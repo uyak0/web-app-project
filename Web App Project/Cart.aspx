@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="Cart.css" rel="stylesheet" />
     <link rel="stylesheet" href="main.css"/>
     <title>Cart</title>
 </head>
