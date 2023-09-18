@@ -89,6 +89,7 @@
     <Content Include="Assets\greentea.PNG" />
     <Content Include="Assets\latte2.PNG" />
     <Content Include="Assets\order.PNG" />
+    <Content Include="Cart.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Home.css" />
     <Content Include="main.css" />
@@ -121,6 +122,13 @@
     </Compile>
     <Compile Include="Account\SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Members.Designer.cs">
       <AutoGen>True</AutoGen>
