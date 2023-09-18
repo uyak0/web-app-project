@@ -1,23 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Web_App_Project.Home" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <link rel="stylesheet" href="main.css"/>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NavBar.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Web_App_Project.Home1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Home
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="Home.css" />
-    <title>Home</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <!--Nav Bar-->
-        <div class="navbar">
-            <a href="../Home.aspx"> Home </a> 
-            <a href="../Menu.aspx"> Menu </a> 
-            <a href="../Rewards.aspx"> Rewards </a>
-            <a href="../Account/Login.aspx"> Account </a>
-        </div>
-        <!--Table Grid For Homepage-->
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!--Table Grid For Homepage-->
     <table style="width:1vh;">
         <tr style="width:1100px;height:50px">
             <td style="width:60px;text-align:center; padding:80px; background:#1077de;">
@@ -58,8 +47,4 @@ At Drinkables, we believe that every sip holds a story. So why not come and emba
             </td>
         </tr>
     </table>
-    </form>
-</body>
-</html>
-
-
+</asp:Content>
