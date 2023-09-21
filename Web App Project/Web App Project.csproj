@@ -87,6 +87,10 @@
     <Content Include="App_Data\Menu_log.ldf">
       <DependentUpon>Menu.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\Orders.mdf" />
+    <Content Include="App_Data\Orders_log.ldf">
+      <DependentUpon>Orders.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\drinkables-logo.png" />
     <Content Include="Assets\favicon-dark.png" />
     <Content Include="Assets\favicon-light.png" />

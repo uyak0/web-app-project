@@ -13,5 +13,9 @@ namespace Web_App_Project
         {
 
         }
+
+        protected void Application_Start(object sender, EventArgs e) {
+        
+        }
     }
 }
