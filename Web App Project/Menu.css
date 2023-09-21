@@ -1,4 +1,25 @@
-﻿.logo {
+﻿.drinkContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.latte {
+    width: 100%;
+    max-width: 25%;
+    margin-bottom: 20px
+}
+
+.drinkImage {
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
+.logo {
     margin: 6em 0 6em 0;
     width: 500px;
     position: relative;
@@ -6,59 +27,7 @@
     left: 441px;
 }
 
-.lattee {
-    position: relative;
-    height: 227px;
-    width: 228px;
-    margin-top: 0px;
-}
 
-.Frappe {
-    position: relative;
-    height: 227px;
-    width: 228px;
-    top: -634px;
-    left: 939px;
-    margin-top: 1px;
-}
-
-.greentea {
-    position: relative;
-    height: 227px;
-    width: 228px;
-    top: -327px;
-    left: 569px;
-    margin-top: 0px;
-}
-
-.latte {
-    margin: 6em 0 6em 0;
-    height: 100px;
-    width: 74px;
-    position: relative;
-    top: -131px;
-    left: 194px;
-}
-
-.lattetxt {
-    position: relative;
-    color: cornsilk;
-}
-
-.teatxt {
-    position: relative;
-    color: cornsilk;
-    top: -326px;
-    left: 569px;
-    margin-top: 15px;
-}
-
-.frappetxt {
-    position: relative;
-    color: cornsilk;
-    top: -639px;
-    left: 937px;
-}
 
 #ContentPlaceHolder1_addLatte {
     position: relative;

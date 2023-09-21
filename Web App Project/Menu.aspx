@@ -5,37 +5,29 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <link href="Menu.css" rel="stylesheet" />
 </asp:Content>
+
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <img class="logo" src="Assets/drinkables-logo.png" />
+    <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatLayout="Flow" RepeatDirection="Horizontal"  CssClass="drinkContainer">
+        <ItemTemplate>
+            <div class="latte">
+                  <asp:Image ID="drinkImage" runat="server" ImageUrl='<%# Eval("ImageUrl") %>' AlternateText="Drink Image" CssClass="drinkImage" />
+                  <h4 class="drinkName" style="color: white;"><%# Eval("Drinks_Name") %></h4>
+                  <p class="drinkPrice" style="color: white;"><%# Eval("Price") %></p>
+                  
+                  <asp:Button ID="addLatte" runat="server" OnClick="btnLatte_Click" CommandArgument='<%# Eval("ImageUrl") %>' Text="Add" />
+            </div>
+        </ItemTemplate>
+    </asp:DataList>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT * FROM [Menu] WHERE Category <> 'Custom'"></asp:SqlDataSource>
+   <!-- If need to use the SqlDataSource remember to specify DataSourceID = "SqlDataSource1" -->
 
-    <div class="latte">
-        <img class="lattee" src="Assets/latte2.PNG" />
-        <h4 class="lattetxt">Latte</h4>
-        <asp:LinkButton ID="addLatte" runat="server" OnClick="btnLatte_Click">Add</asp:LinkButton>
-        
-    </div>
     
-    <div class="tea">
-        <img class="greentea" src="Assets/greentea.PNG" />
-        <h4 class="teatxt">Green Tea</h4>       
-        <asp:LinkButton ID="addGreenTea" runat="server" OnClick="btnGreentea_Click">Add</asp:LinkButton>
-        
-        
-        
-    </div>
-
-
-
-    <div class="frappe">
-        <img class="Frappe" src="Assets/frappe.PNG" />
-        <h4 class="frappetxt">Frappe</h4>
-        <asp:LinkButton ID="addFrappe" runat="server" OnClick="btnFrappe_Click">Add</asp:LinkButton>
-    </div>
-
     <div class="viewCart">
         <asp:Button ID="vCart" runat="server" Text="View Cart" OnClick="btnvCart_Click" BackColor="#FF9933" BorderStyle="Dashed" Height="41px" style="margin-top: 0px; width: 2796px;" />
-
+    
     </div>
 
 </asp:Content>
