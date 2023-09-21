@@ -23,9 +23,9 @@
 
   
     <form id="form1" runat="server">
-        
         <div>
-            <img class="order" src="Assets/order.PNG" />
+            
+            <asp:Image ID="selectedDrinkImage" runat="server"  CssClass="order"/>
             <br />
             <br />
             <br />
@@ -37,40 +37,37 @@
 
         <hr />
         <br />
+
+        
+        
         
         <div style="color: #FFFFFF">
-        <asp:RadioButtonList ID="RadioButtonList1" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
-            <asp:ListItem Value="0" Color="White">Hot</asp:ListItem>
-            <asp:ListItem Value="0">Ice (R)</asp:ListItem>
-            <asp:ListItem Value="2">Ice(L) (+RM 2)</asp:ListItem>
+        <asp:RadioButtonList ID="RadioButtonList1"  runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+            
         </asp:RadioButtonList>
+           
             <hr />
         </div>
-        
-        <asp:Label ID="syrup" runat="server" Text="Add syrup" Font-Bold="True" ForeColor="White"></asp:Label>
+               <asp:Label ID="syrup" runat="server" Text="Add syrup" Font-Bold="True" ForeColor="White"></asp:Label>
         
         <br />
 
         <div style="color: #FFFFFF">
         <asp:CheckBoxList ID="CheckBoxList1" runat="server" OnSelectedIndexChanged="CheckBoxList1_SelectedIndexChanged">
-            <asp:ListItem Value="0">Normal Syrup</asp:ListItem>
-            <asp:ListItem Value="2">Hazelnut Syrup (+RM2)</asp:ListItem>
-            <asp:ListItem Value="2">Caramel Syrup (+RM 2)</asp:ListItem>
-            <asp:ListItem Value="2">Rose Syrup (+RM 2)</asp:ListItem>
-            <asp:ListItem Value=" 2">Rose Syrup (+RM 2)</asp:ListItem>
-            <asp:ListItem Value="2">Vanilla Syrup (+RM 2)</asp:ListItem>
+            
         </asp:CheckBoxList>
             <hr />
+           
+        
             <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="Add drizzle"></asp:Label>
             <br />
             <asp:CheckBoxList ID="CheckBoxList2" runat="server">
-                <asp:ListItem Value="3">Chocolate drizzle (+RM 3)</asp:ListItem>
-                <asp:ListItem Value="3">Caramel Drizzle (+RM 3)</asp:ListItem>
-                <asp:ListItem Value="3">Strawberry Drizzle (+RM 3)</asp:ListItem>
+               
             </asp:CheckBoxList>
             <hr />
             <br />
         </div>
+        
 
         <div>
             <asp:Button ID="backMenu" runat="server" Text="Add to cart" OnClick="btnBackMenu_Click" BackColor="#FF9933" BorderColor="#FF9933" />
@@ -78,6 +75,7 @@
             <br />
             <br />
         </div>
+       
     </form>
 </body>
 </html>

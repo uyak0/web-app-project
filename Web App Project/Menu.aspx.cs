@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,24 @@ namespace Web_App_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Menu.mdf;Integrated Security=True";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    //string query = "SELECT * FROM Menu WHERE Category <> 'Custom'";
+                    //SqlCommand command = new SqlCommand(query, connection);
+
+                    //SqlDataReader reader = command.ExecuteReader();
+                   // DataList1.DataSource = reader; //this two code can threw away after apply sqldatasource in Menu.aspx
+                    //DataList1.DataBind();
+
+
+                }
+
+
+            }
 
         }
         protected void btnSelfPickUp_Click(object sender, EventArgs e)
@@ -30,24 +49,12 @@ namespace Web_App_Project
 
         protected void btnLatte_Click(object sender, EventArgs e)
         {
-            Session["SelectedDrinks"] = "Latte";
-
-            Response.Redirect("Order.aspx");
+            Button btn = (Button)(sender);
+           string imageUrl = btn.CommandArgument;
+            Response.Redirect("Order.aspx?ImageUrl=" + imageUrl);
         }
 
-        protected void btnGreentea_Click(object sender, EventArgs e)
-        {
-            Session["SelectedDrinks"] = "Green Tea";
-
-            Response.Redirect("Order.aspx");
-        }
-
-        protected void btnFrappe_Click(object sender, EventArgs e)
-        {
-            Session["SelectedDrinks"] = "Frappe";
-
-            Response.Redirect("Order.aspx");
-        }
+    
 
         protected void btnvCart_Click(object sender, EventArgs e)
         {
@@ -61,7 +68,9 @@ namespace Web_App_Project
             Response.Redirect("Order.aspx");
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
+      
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
 
         }

@@ -87,17 +87,27 @@
     <Content Include="App_Data\Menu_log.ldf">
       <DependentUpon>Menu.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\Orders.mdf" />
-    <Content Include="App_Data\Orders_log.ldf">
-      <DependentUpon>Orders.mdf</DependentUpon>
-    </Content>
+    <Content Include="Assets\americano.PNG" />
+    <Content Include="Assets\blacktea.PNG" />
+    <Content Include="Assets\brownsugarlatte.PNG" />
+    <Content Include="Assets\caramelespressofrappe.PNG" />
+    <Content Include="Assets\chocofrappe.PNG" />
+    <Content Include="Assets\chocolatte.PNG" />
     <Content Include="Assets\drinkables-logo.png" />
+    <Content Include="Assets\espresso.PNG" />
     <Content Include="Assets\favicon-dark.png" />
     <Content Include="Assets\favicon-light.png" />
     <Content Include="Assets\frappe.PNG" />
     <Content Include="Assets\greentea.PNG" />
     <Content Include="Assets\latte2.PNG" />
+    <Content Include="Assets\matchacoffee.PNG" />
+    <Content Include="Assets\matchafrappe.PNG" />
+    <Content Include="Assets\matchalatte.PNG" />
+    <Content Include="Assets\mocha.PNG" />
+    <Content Include="Assets\mochafrappe.PNG" />
+    <Content Include="Assets\oolongtea.PNG" />
     <Content Include="Assets\order.PNG" />
+    <Content Include="Assets\strawberryfrappe.PNG" />
     <Content Include="Cart.aspx" />
     <Content Include="Cart.css" />
     <Content Include="Home.aspx" />
@@ -105,7 +115,6 @@
     <Content Include="main.css" />
     <Content Include="Assets\somerandomcocktail.png" />
     <Content Include="Menu.aspx" />
-    <Content Include="Menu1.aspx" />
     <Content Include="Menu.css" />
     <Content Include="Order.aspx" />
     <Content Include="Order.css" />
@@ -162,13 +171,6 @@
     </Compile>
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Menu1.aspx.cs">
-      <DependentUpon>Menu1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Menu1.aspx.designer.cs">
-      <DependentUpon>Menu1.aspx</DependentUpon>
     </Compile>
     <Compile Include="NavBar.Master.cs">
       <DependentUpon>NavBar.Master</DependentUpon>
