@@ -24,7 +24,7 @@
             CreateUserText="Don't have an account? Sign up now." 
             UserNameLabelText="Username: " 
             DestinationPageUrl="~/Account/AccountPage.aspx" 
-            CreateUserUrl="~/Account/SignUp.aspx">
+            CreateUserUrl="~/Account/SignUp.aspx" PasswordRecoveryText="Forgot your password? Click here." PasswordRecoveryUrl="~/Account/PasswordRecovery.aspx">
             <%--OnLoggingIn="Login1_LoggingIn"--%>
 
             <InstructionTextStyle Font-Italic="True" ForeColor="Black" Font-Size="Larger" />

@@ -3,6 +3,26 @@
     Home
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <style script="text/css">
+         *
+         {
+             font-family:sans-serif;
+         }
+
+         div {
+             padding-bottom: 30px;
+         }
+
+         table {
+             text-align: center;
+             width: 100%;
+         }
+
+         .imgHover:hover {
+             opacity: 0.7;
+             transition: .5s ease;
+         }
+    </style>
     <link rel="stylesheet" href="Home.css" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
