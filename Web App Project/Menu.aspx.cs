@@ -10,11 +10,13 @@ namespace Web_App_Project
 {
     public partial class Menu1 : System.Web.UI.Page
     {
+        List<MenuItem> selectedDrinks = new List<MenuItem>();
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
             {
                 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Menu.mdf;Integrated Security=True";
+                selectedDrinks = new List<MenuItem>();
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -22,43 +24,50 @@ namespace Web_App_Project
                     //SqlCommand command = new SqlCommand(query, connection);
 
                     //SqlDataReader reader = command.ExecuteReader();
-                   // DataList1.DataSource = reader; //this two code can threw away after apply sqldatasource in Menu.aspx
+                    // DataList1.DataSource = reader; //this two code can threw away after apply sqldatasource in Menu.aspx
                     //DataList1.DataBind();
 
-
+                    string totalOrderPrice = Request.QueryString["totalOrderPrice"];
+                  
+                    if (totalOrderPrice==null)
+                    {
+                        vCart.Text += " ( 0.00 )";
+                    }
+                    else
+                    {
+                        vCart.Text = "View Cart (" + totalOrderPrice + ")";
+                    }
+                    
                 }
 
 
             }
 
         }
-        protected void btnSelfPickUp_Click(object sender, EventArgs e)
-        {
-            string date = Request.Form["txtDate"];
-            string time = Request.Form["txtTime"];
-            // Perform any logic with the date and time inputs
-        }
-
-        protected void btnDelivery_Click(object sender, EventArgs e)
-        {
-            string date = Request.Form["txtDate"];
-            string time = Request.Form["txtTime"];
-            string address = Request.Form["txtAddress"];
-            // Perform any logic with the date, time, and address inputs
-        }
+     
 
         protected void btnLatte_Click(object sender, EventArgs e)
         {
             Button btn = (Button)(sender);
-           string imageUrl = btn.CommandArgument;
-            Response.Redirect("Order.aspx?ImageUrl=" + imageUrl);
+            string imageUrl = btn.CommandArgument;
+            string totalOrderPrice = Request.QueryString["totalOrderPrice"];
+            if(totalOrderPrice == null)
+            {
+                totalOrderPrice = "0.00";
+            }
+            Response.Redirect("Order.aspx?" + imageUrl + "&totalOrderPrice=" + totalOrderPrice);
+
+           
+
+            // Redirect to Order.aspx, passing the selected drinks and total price as query parameters.
+            Response.Redirect($"Order.aspx?totalPrice={totalOrderPrice}");
         }
 
     
 
         protected void btnvCart_Click(object sender, EventArgs e)
         {
-            Session["SelectedDrinks"] = "Frappe";
+            
 
             Response.Redirect("Cart.aspx");
         }
