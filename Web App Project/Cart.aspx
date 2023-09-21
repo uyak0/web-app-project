@@ -80,7 +80,6 @@
                                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("productID") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:ImageField HeaderText="Product Image" DataImageUrlField="productImage1" ControlStyle-Width="60%" ReadOnly="true"></asp:ImageField>
                                     <asp:BoundField DataField="productName" HeaderText="Item" SortExpression="productName" ReadOnly="True" />
                                     <asp:BoundField DataField="productSize" HeaderText="Size" SortExpression="productSize" ReadOnly="True" />
 
@@ -113,10 +112,9 @@
                                 </DeleteParameters>
                                 <InsertParameters>
                                     <asp:Parameter Name="cartID" Type="String" />
-                                    <asp:Parameter Name="productID" Type="String" />
+                                    <asp:Parameter Name="MenuID" Type="String" />
                                     <asp:Parameter Name="quantity" Type="Int32" />
                                     <asp:Parameter Name="price" Type="Double" />
-                                    <asp:Parameter Name="productImage1" Type="String" />
                                 </InsertParameters>
                                 <SelectParameters>
                                     <asp:SessionParameter Name="username" SessionField="username" />
