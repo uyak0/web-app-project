@@ -26,6 +26,7 @@
         <div>
             
             <asp:Image ID="selectedDrinkImage" runat="server"  CssClass="order"/>
+           <!--<asp:Label ID="lblTest" runat="server" Text="Label" ForeColor="White"></asp:Label>  for testing only--> 
             <br />
             <br />
             <br />
@@ -42,6 +43,7 @@
         
         
         <div style="color: #FFFFFF">
+
         <asp:RadioButtonList ID="RadioButtonList1"  runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
             
         </asp:RadioButtonList>

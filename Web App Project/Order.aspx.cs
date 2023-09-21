@@ -15,10 +15,11 @@ namespace Web_App_Project
             if (!IsPostBack)
             {
                 string imageUrl = Request.QueryString["ImageUrl"];
+                lblTest.Text = Request.QueryString["Price"];
 
-                string query1 =  "SELECT Drinks_Name FROM Menu WHERE MenuID IN ('O001', 'O002', 'O003')";
-                string query2 = "SELECT  Drinks_Name FROM Menu WHERE MenuID IN ('OS001', 'OS002', 'OS003', 'OS004', 'OS005')";
-                string query3 = "SELECT  Drinks_Name FROM Menu WHERE MenuID IN ('OD001', 'OD002', 'OD003')";
+                string query1 =  "SELECT Price, Drinks_Name FROM Menu WHERE MenuID IN ('O001', 'O002', 'O003')";
+                string query2 = "SELECT  Price, Drinks_Name FROM Menu WHERE MenuID IN ('OS001', 'OS002', 'OS003', 'OS004', 'OS005')";
+                string query3 = "SELECT  Price, Drinks_Name FROM Menu WHERE MenuID IN ('OD001', 'OD002', 'OD003')";
 
                 selectedDrinkImage.ImageUrl = imageUrl;
 
@@ -33,7 +34,7 @@ namespace Web_App_Project
                         {
                             // Bind the data to the RadioButtonList.
                             RadioButtonList1.DataSource = reader;
-                           // RadioButtonList1.DataValueField = "MenuID"; // Dont need display the ID
+                            RadioButtonList1.DataValueField = "Price"; // Dont need display the ID
                             RadioButtonList1.DataTextField = "Drinks_Name"; // The database field that holds the display text.
                             RadioButtonList1.DataBind();
                         }
@@ -45,7 +46,8 @@ namespace Web_App_Project
                         using (SqlDataReader reader1 = command1.ExecuteReader())
                         {
                             CheckBoxList1.DataSource = reader1;
-                           // CheckBoxList1.DataValueField = "OptionID";
+                            // CheckBoxList1.DataValueField = "OptionID";
+                            CheckBoxList1.DataValueField = "Price"; // Dont need display the ID
                             CheckBoxList1.DataTextField = "Drinks_Name";
                             CheckBoxList1.DataBind();
                         }
@@ -58,6 +60,7 @@ namespace Web_App_Project
                         {
                             CheckBoxList2.DataSource = reader2;
                             //CheckBoxList2.DataValueField = "OptionID";
+                            CheckBoxList2.DataValueField = "Price";
                             CheckBoxList2.DataTextField = "Drinks_Name";
                             CheckBoxList2.DataBind();
                         }
@@ -72,9 +75,40 @@ namespace Web_App_Project
 
         protected void btnBackMenu_Click(object sender, EventArgs e)
         {
-            
+            decimal totalPrice = decimal.Parse(Request.QueryString["Price"]);
+            decimal totalOrderPrice = decimal.Parse(Request.QueryString["totalOrderPrice"]);
+            // Get the selected customization options and add their prices to the total price
+           
+            foreach (ListItem item in RadioButtonList1.Items)
+            {
+                if (item.Selected)
+                {
+                    decimal customizationPrice = decimal.Parse(item.Value);
+                    totalPrice += customizationPrice;
+                }
+            }
 
-            Response.Redirect("Menu.aspx");
+            foreach (ListItem item in CheckBoxList1.Items)
+            {
+                if (item.Selected)
+                {
+                    decimal customizationPrice = decimal.Parse(item.Value);
+                    totalPrice += customizationPrice;
+                }
+            }
+
+            foreach (ListItem item in CheckBoxList2.Items)
+            {
+                if (item.Selected)
+                {
+                    decimal customizationPrice = decimal.Parse(item.Value);
+                    totalPrice += customizationPrice;
+                }
+            }
+
+            totalOrderPrice += totalPrice;
+
+            Response.Redirect("Menu.aspx?totalPrice=" + totalPrice + "&totalOrderPrice=" + totalOrderPrice);
         }
 
 
@@ -95,8 +129,8 @@ namespace Web_App_Project
 
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
+                
+        }       
 
         protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
         {
