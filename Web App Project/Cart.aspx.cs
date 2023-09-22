@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
 
-namespace BigButtAssy.Cart
+namespace Drinkables.Cart
 {
     public partial class AddToCart : System.Web.UI.Page
     {
@@ -19,24 +19,6 @@ namespace BigButtAssy.Cart
         SqlConnection conn;
         string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            conn = new SqlConnection(connectionString);
-            conn.Open();
-            if (Session["username"] == null)
-            {
-                Response.Redirect("~/KejuAccount/Login.aspx");
-            }
-            if (GridView1.Rows.Count == 0)
-            {
-                confirmButton.Visible = false;
-            }
-            else
-            {
-                confirmButton.Visible = true;
-            }
-        }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -68,29 +50,20 @@ namespace BigButtAssy.Cart
 
             foreach (GridViewRow row in GridView1.Rows)
             {
-                Label prodId = (Label)row.Cells[0].FindControl("Label1");
+                Label MenuID = (Label)row.Cells[0].FindControl("Label1");
                 Label qty = (Label)row.Cells[5].FindControl("Label2");
 
                 string sqlInsert = "INSERT INTO [OrderDetails] VALUES (@orderID, @productID, CONVERT(INT, @quantity), CONVERT(FLOAT, '" + row.Cells[4].Text + "'))";
                 SqlCommand sqlIn;
                 sqlIn = new SqlCommand(sqlInsert, conn);
                 sqlIn.Parameters.AddWithValue("@orderID", idrand);
-                sqlIn.Parameters.AddWithValue("@productID", prodId.Text);
+                sqlIn.Parameters.AddWithValue("@MenuID", MenuID.Text);
                 sqlIn.Parameters.AddWithValue("@quantity", qty.Text);
 
                 //sqlIn.Parameters.AddWithValue("@quantity", quantity);
                 sqlIn.ExecuteNonQuery();
 
             }
-
-
-
-            string sqlDelete = "DELETE FROM CartItem WHERE cartID = (SELECT cartID FROM ShoppingCart WHERE username = @username)";
-            SqlCommand sqlDel;
-
-            sqlDel = new SqlCommand(sqlDelete, conn);
-            sqlDel.Parameters.AddWithValue("@username", Session["username"]);
-            sqlDel.ExecuteNonQuery();
 
 
 

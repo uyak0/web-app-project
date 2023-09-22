@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Web App Project/App_Data/Members.mdf
+/Web App Project/App_Data/Members_log.ldf
+/Web App Project/App_Data/Menu.mdf
+/Web App Project/App_Data/Menu_log.ldf
+/Web App Project/App_Data/Orders.mdf
+/Web App Project/App_Data/Orders_log.ldf
