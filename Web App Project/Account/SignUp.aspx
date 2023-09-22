@@ -18,7 +18,7 @@
             MembershipProvider="SqlMembershipProvider" 
             ContinueDestinationPageUrl="~/Account/Login.aspx" 
             CancelDestinationPageUrl="~/Account/Login.aspx" 
-            FinishDestinationPageUrl="~/Account/Login.aspx">
+            FinishDestinationPageUrl="~/Account/Login.aspx" EmailRegularExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
             <ContinueButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284775" />
             <CreateUserButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284775" />
             <TitleTextStyle BackColor="#666666" Font-Bold="True" Font-Size="Larger" ForeColor="White" />
