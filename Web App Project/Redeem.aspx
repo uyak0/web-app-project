@@ -73,6 +73,10 @@ button {
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <header>
+    <img src="Assets/drinkables-logo.png" alt="Drinkables logo" style="margin:auto; height: 102px; display: block;" />
+<h1 style="display: block;">Rewards</h1>
+</header>
     <div class="container">
         <h2>Select a Reward</h2>
         <button class="reward-button" data-reward-name="2" data-points-required="100">30% Off</button>
@@ -80,7 +84,7 @@ button {
         <button class="reward-button" data-reward-name="10" data-points-required="300">Free Drink</button>
 
         <div>
-            <p>Your Available Points: <span id="pointsBalance"></span></p>
+            <p>Your Available Points: <span id="pointsBalance">152</span></p>
         </div>
 
         <div>
@@ -88,6 +92,8 @@ button {
         </div>
     </div>
     <script>
+        const pointsBalance = 
+
         // JavaScript to handle button clicks and redemption logic
         const rewardButtons = document.querySelectorAll('.reward-button');
         const pointsBalanceSpan = document.getElementById('pointsBalance');
