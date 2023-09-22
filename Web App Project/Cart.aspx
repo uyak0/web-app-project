@@ -17,8 +17,8 @@
                     font-family: sans-serif;
                 }
 
-                .shoppingCart {
-                    width: 90%;
+                .Cart {
+                    width: 95%;
                     margin-left: 10%;
                     text-align: center;
                 }
@@ -65,19 +65,19 @@
                         text-align: center;
                     }
             </style>
-            <div cssclass="ShoppingCart">
-                <table class="shoppingCart">
+            <div cssclass="Cart">
+                <table class="Cart">
                     <tr>
                         <td style="font-size: 140%">Shopping Cart</td>
                         <td style="font-size: 100%">&nbsp;</td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:GridView ID="GridView1" CssClass="CartGrid" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ShowHeaderWhenEmpty="True" DataKeyNames="productID">
+                            <asp:GridView ID="GridView1" CssClass="CartGrid" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ShowHeaderWhenEmpty="True" DataKeyNames="MenuID">
                                 <Columns>
-                                    <asp:TemplateField HeaderText="ID" SortExpression="productID">
+                                    <asp:TemplateField HeaderText="ID" SortExpression="MenuID">
                                         <ItemTemplate>
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("productID") %>'></asp:Label>
+                                            <asp:Label ID="Label1" runat="server" Text='<%# Bind("MenuID") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="productName" HeaderText="Item" SortExpression="productName" ReadOnly="True" />
@@ -93,7 +93,7 @@
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:BoundField DataField="Subtotal" HeaderText="Subtotal" ReadOnly="True" SortExpression="Subtotal" />
-                                    <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True" />
+                                    <asp:CommandField ButtonType="Button" ShowEditButton="True" />
                                     <asp:BoundField DataField="Test" HeaderText="Test" SortExpression="Test" Visible="False" />
                                 </Columns>
                                 <EmptyDataTemplate>
@@ -106,9 +106,9 @@
 
                                 <RowStyle CssClass="rows"></RowStyle>
                             </asp:GridView>
-                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM CartItem WHERE (CartItem.productID = @productID)" InsertCommand="INSERT INTO [CartItem] ([cartID], [productID], [quantity], [price]) VALUES (@cartID, @productID, @quantity, @price)" SelectCommand="SELECT CartItem.productID, P.productImage1, P.productName, P.productSize, P.productPrice, CartItem.quantity, P.productPrice * CartItem.quantity AS Subtotal, CartItem.cartID AS Test FROM CartItem INNER JOIN Product AS P ON CartItem.productID = P.productID AND CartItem.cartID = (SELECT cartID FROM ShoppingCart WHERE (username = @username))" UpdateCommand="UPDATE CartItem SET quantity = @quantity WHERE (CartItem.productID = @productID)">
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM Orders.dbo.CartItem WHERE (CartItem.MenuID = @MenuID)" InsertCommand="INSERT INTO [CartItem] ([cartID], [MenuID], [quantity], [price]) VALUES (@cartID, @MenuID, @quantity, @price)" SelectCommand="SELECT A.MenuID, B.price * A.quantity AS Subtotal, A.cartID AS Test FROM Orders.dbo.CartItem INNER JOIN Menu.dbo.Menu AS B ON A.MenuID = B.MenuID" UpdateCommand="UPDATE CartItem SET quantity = @quantity WHERE (CartItem.MenuID = @MenuID)">
                                 <DeleteParameters>
-                                    <asp:Parameter Name="productID" Type="String" />
+                                    <asp:Parameter Name="MenuID" Type="String" />
                                 </DeleteParameters>
                                 <InsertParameters>
                                     <asp:Parameter Name="cartID" Type="String" />
