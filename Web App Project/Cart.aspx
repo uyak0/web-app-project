@@ -68,12 +68,12 @@
             <div cssclass="Cart">
                 <table class="Cart">
                     <tr>
-                        <td style="font-size: 140%">Shopping Cart</td>
+                        <td style="font-size: 140%">Order Cart</td>
                         <td style="font-size: 100%">&nbsp;</td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:GridView ID="Grid1" CssClass="CartGrid" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="Grid1_SelectedIndexChanged" ShowHeaderWhenEmpty="True" DataKeyNames="MenuID">
+                            <asp:GridView ID="Grid1" CssClass="CartGrid" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="Grid1_SelectedIndexChanged" ShowHeaderWhenEmpty="True" DataKeyNames="MenuID" AllowPaging="False">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID" SortExpression="MenuID">
                                         <ItemTemplate>
@@ -98,7 +98,7 @@
                                 </Columns>
                                 <EmptyDataTemplate>
                                     <div align="center">
-                                        There is nothing in your cart yet. <a href="Web App Project\Menu.aspx">Start Ordering!</a>
+                                        Your Cart is Empty. <a href="/Menu.aspx">Start Ordering!</a>
                                     </div>
                                 </EmptyDataTemplate>
 
@@ -131,16 +131,16 @@
                         <td>
                             <table class="subtotalDisplay" style="padding-left: 10px; padding-right: 10px; border-collapse: collapse; border-spacing: 2px;">
                                 <tr>
-                                    <td colspan="2" class="auto-style11" style="font-size: 150%; font-weight: bolder; font-style: normal; line-height: normal; text-align: left; background-color: #000000; padding: 10px; color: #FFFFFF;">Order Summary</td>
+                                    <td colspan="2" style="font-size: 150%; font-weight: bolder; font-style: normal; line-height: normal; text-align: left; background-color: #000000; padding: 10px; color: #FFFFFF;">Order Summary</td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style14" style="font-size: 150%">Subtotal</td>
-                                    <td class="auto-style5">
+                                    <td style="font-size: 150%">Subtotal</td>
+                                    <td>
                                         <asp:Label ID="subtotalDisplay" runat="server" EnableTheming="True">0.00</asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style1" colspan="2">
+                                    <td colspan="2">
                                         <asp:Button ID="checkout" runat="server" Text="Checkout" Height="63px" Width="335px" OnClick="checkout_Click" Visible="False" />
                                         <br />
                                     </td>
