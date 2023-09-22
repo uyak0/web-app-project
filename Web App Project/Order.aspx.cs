@@ -112,12 +112,12 @@ namespace Web_App_Project
         }
 
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void Grid1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
+        protected void Grid1_SelectedIndexChanged1(object sender, EventArgs e)
         {
 
         }
