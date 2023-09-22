@@ -130,6 +130,7 @@
     <Content Include="Redeem.css" />
     <Content Include="Rewards.aspx" />
     <Content Include="Rewards.css" />
+    <Content Include="RewardsLoggedIn.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +211,13 @@
     </Compile>
     <Compile Include="Rewards.aspx.designer.cs">
       <DependentUpon>Rewards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RewardsLoggedIn.aspx.cs">
+      <DependentUpon>RewardsLoggedIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RewardsLoggedIn.aspx.designer.cs">
+      <DependentUpon>RewardsLoggedIn.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

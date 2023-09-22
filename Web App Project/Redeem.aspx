@@ -80,7 +80,7 @@ button {
         <button class="reward-button" data-reward-name="10" data-points-required="300">Free Drink</button>
 
         <div>
-            <p>Your Available Points: <span id="pointsBalance">500</span></p>
+            <p>Your Available Points: <span id="pointsBalance"></span></p>
         </div>
 
         <div>

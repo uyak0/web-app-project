@@ -56,7 +56,7 @@
         <section>
             <h2>Benefits</h2>
             <ul>
-                <li>10 points for every $1 spent.</li>
+                <li>1 point for every $1 spent.</li>
                 <li>Exclusive access to new flavors and promotions.</li>
                 <li>Birthday rewards and special offers.</li>
             </ul>
@@ -66,6 +66,7 @@
         <section>
             <h2>Redeem Rewards</h2>
             <p>Log in to your account to view your points balance and redeem rewards.</p>
+            <asp:Button ID="Redeem" runat="server" Text="Redeem" OnClick="btnRedeemRedirect" />
         </section>
 
         <!-- Section: Contact Us -->

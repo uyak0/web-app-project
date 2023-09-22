@@ -3,6 +3,7 @@
   <siteMapNode url="~/Home.aspx" title="Home"  description="Home Page">
     <siteMapNode url="~/Menu.aspx" title="Menu"  description="Menu" />
     <siteMapNode url="~/Rewards.aspx" title="Rewards"  description="Rewards" />
+	  <siteMapNode url="~/Redeem.aspx" title="Rewards"  description="Redeem" />
     <siteMapNode url="~/Account/AccountPage.aspx" title="Anonymous Account"  description="Account Page">
       <siteMapNode url="~/Account/SignUp.aspx" title="Sign Up Page"/>
       <siteMapNode url="~/Account/Login.aspx" title="Login Page">
