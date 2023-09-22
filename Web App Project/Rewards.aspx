@@ -66,7 +66,9 @@
         <section>
             <h2>Redeem Rewards</h2>
             <p>Log in to your account to view your points balance and redeem rewards.</p>
-            <asp:Button ID="Redeem" runat="server" Text="Redeem" OnClick="btnRedeemRedirect" />
+            <p>
+                <asp:Button ID="Redeem" runat="server" Text="Redeem" OnClick="btnRedeemRedirect" />
+            </p>
         </section>
 
         <!-- Section: Contact Us -->

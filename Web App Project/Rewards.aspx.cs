@@ -22,5 +22,10 @@ namespace Web_App_Project
         {
             Response.Redirect("Login.aspx");
         }
+
+        protected void btnRedeemRedirect(object sender, EventArgs e)
+        {
+            Response.Redirect("Redeem.aspx");
+        }
     }
 }
