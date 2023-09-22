@@ -26,7 +26,7 @@
             var selectedRadioButton = radioButtonList.querySelector('input[type="radio"]:checked');
             
             if (!selectedRadioButton) {
-                alert('Please select a radio button (hot, ice, or iced) before adding to the cart.');
+                alert('Please select a radio button (Hot, Ice(R), or Iced(L)(+RM 2)) before adding to the cart.');
                 return false; // Prevent user to click
             }
             
