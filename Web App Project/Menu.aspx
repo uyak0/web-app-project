@@ -17,7 +17,7 @@
                   <h4 class="drinkName" style="color: white;"><%# Eval("Drinks_Name") %></h4>
                   <p class="drinkPrice" style="color: white;"><%# Eval("Price") %></p>
                   
-                  <asp:Button ID="addLatte" runat="server" OnClick="btnLatte_Click" CommandArgument='<%# "ImageUrl=" + Eval("ImageUrl") + "&Drinks_Name=" + Eval("Drinks_Name") + "&Price=" + Eval("Price") %>' Text="Add" />
+                  <asp:Button ID="addLatte" runat="server" OnClick="btnLatte_Click" CommandArgument='<%# "ImageUrl=" + Eval("ImageUrl") + "&Drinks_Name=" + Eval("Drinks_Name") + "&Price=" + Eval("Price") %>' Text="Add" BackColor="#FF6600" />
             </div>
         </ItemTemplate>
     </asp:DataList>
@@ -26,7 +26,7 @@
 
     
     <div class="viewCart">
-        <asp:Button ID="vCart" runat="server" Text="View Cart" OnClick="btnvCart_Click" BackColor="#FF9933" BorderStyle="Dashed" Height="41px" style="margin-top: 0px; width: 2796px;" />
+        <asp:Button ID="vCart" runat="server" Text="View Cart" OnClick="btnvCart_Click" BackColor="#FF9933" BorderStyle="Dashed" Height="41px" style="margin-top: 0px; width: 2796px;" Font-Bold="True" />
     
     </div>
 

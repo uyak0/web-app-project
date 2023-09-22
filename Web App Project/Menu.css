@@ -3,6 +3,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     justify-content: center;
+    padding-bottom: 70px;
 }
 
 .latte {
@@ -58,6 +59,8 @@
     width: 100%;
 }
 
+
+
 .viewCart{
-    width:100%;
+    
 }

@@ -18,6 +18,22 @@
             left: 567px;
         }
     </style>
+
+      
+    <script type="text/javascript">
+        function validateSelection() {
+            var radioButtonList = document.getElementById('<%= RadioButtonList1.ClientID %>');
+            var selectedRadioButton = radioButtonList.querySelector('input[type="radio"]:checked');
+            
+            if (!selectedRadioButton) {
+                alert('Please select a radio button (hot, ice, or iced) before adding to the cart.');
+                return false; // Prevent user to click
+            }
+            
+           //Proceed if the radio button is selected
+            return true;
+        }
+    </script>
 </head>
 <body>
 
@@ -44,7 +60,7 @@
         
         <div style="color: #FFFFFF">
 
-        <asp:RadioButtonList ID="RadioButtonList1"  runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+        <asp:RadioButtonList ID="RadioButtonList1"  runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" >
             
         </asp:RadioButtonList>
            
@@ -72,7 +88,7 @@
         
 
         <div>
-            <asp:Button ID="backMenu" runat="server" Text="Add to cart" OnClick="btnBackMenu_Click" BackColor="#FF9933" BorderColor="#FF9933" />
+            <asp:Button ID="backMenu" runat="server" Text="Add to cart" OnClientClick="return validateSelection()" OnClick="btnBackMenu_Click" BackColor="#FF9933" BorderColor="#FF9933" />
             <br />
             <br />
             <br />
