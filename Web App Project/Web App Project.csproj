@@ -91,6 +91,10 @@
     <Content Include="App_Data\Orders_log.ldf">
       <DependentUpon>Orders.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\Rewards.mdf" />
+    <Content Include="App_Data\Rewards_log.ldf">
+      <DependentUpon>Rewards.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\americano.PNG" />
     <Content Include="Assets\blacktea.PNG" />
     <Content Include="Assets\brownsugarlatte.PNG" />
@@ -122,6 +126,8 @@
     <Content Include="Menu.css" />
     <Content Include="Order.aspx" />
     <Content Include="Order.css" />
+    <Content Include="Redeem.aspx" />
+    <Content Include="Redeem.css" />
     <Content Include="Rewards.aspx" />
     <Content Include="Rewards.css" />
     <Content Include="Web.config" />
@@ -191,6 +197,13 @@
       <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redeem.aspx.cs">
+      <DependentUpon>Redeem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redeem.aspx.designer.cs">
+      <DependentUpon>Redeem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Rewards.aspx.cs">
       <DependentUpon>Rewards.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
