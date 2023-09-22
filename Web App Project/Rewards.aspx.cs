@@ -13,17 +13,17 @@ namespace Web_App_Project
         {
 
         }
-        protected void btnRegisterRedirect(object sender, EventArgs e)
+        protected void BtnRegisterRedirect(object sender, EventArgs e)
         {
             Response.Redirect("SignUp.aspx");
         }
 
-        protected void btnLoginRedirect(object sender, EventArgs e)
+        protected void BtnLoginRedirect(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
         }
 
-        protected void btnRedeemRedirect(object sender, EventArgs e)
+        protected void BtnRedeemRedirect(object sender, EventArgs e)
         {
             Response.Redirect("Redeem.aspx");
         }
