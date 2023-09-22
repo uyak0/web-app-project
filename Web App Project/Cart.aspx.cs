@@ -48,54 +48,54 @@ namespace Drinkables.Cart
 
             sqlOr.ExecuteNonQuery();
 
-            foreach (GridViewRow row in Grid1.Rows)
-            {
-                Label MenuID = (Label)row.Cells[0].FindControl("Label1");
-                Label qty = (Label)row.Cells[5].FindControl("Label2");
+        //    foreach (GridViewRow row in Grid1.Rows)
+        //    {
+        //        Label MenuID = (Label)row.Cells[0].FindControl("Label1");
+        //        Label qty = (Label)row.Cells[5].FindControl("Label2");
 
-                string sqlInsert = "INSERT INTO [OrderDetails] VALUES (@orderID, @productID, CONVERT(INT, @quantity), CONVERT(FLOAT, '" + row.Cells[4].Text + "'))";
-                SqlCommand sqlIn;
-                sqlIn = new SqlCommand(sqlInsert, conn);
-                sqlIn.Parameters.AddWithValue("@orderID", idrand);
-                sqlIn.Parameters.AddWithValue("@MenuID", MenuID.Text);
-                sqlIn.Parameters.AddWithValue("@quantity", qty.Text);
+        //        string sqlInsert = "INSERT INTO [OrderDetails] VALUES (@orderID, @productID, CONVERT(INT, @quantity), CONVERT(FLOAT, '" + row.Cells[4].Text + "'))";
+        //        SqlCommand sqlIn;
+        //        sqlIn = new SqlCommand(sqlInsert, conn);
+        //        sqlIn.Parameters.AddWithValue("@orderID", idrand);
+        //        sqlIn.Parameters.AddWithValue("@MenuID", MenuID.Text);
+        //        sqlIn.Parameters.AddWithValue("@quantity", qty.Text);
 
-                //sqlIn.Parameters.AddWithValue("@quantity", quantity);
-                sqlIn.ExecuteNonQuery();
+        //        //sqlIn.Parameters.AddWithValue("@quantity", quantity);
+        //        sqlIn.ExecuteNonQuery();
 
-            }
-
-
-
-            conn.Close();
-
-            Response.Redirect("OrderPage.aspx");
+        //    }
 
 
-        }
 
-        protected void confirmButton_Click(object sender, EventArgs e)
-        {
-            confirmButton.Visible = false;
-            checkout.Visible = true;
+        //    conn.Close();
 
-            double total = 0.0;
+        //    Response.Redirect("OrderPage.aspx");
 
-            for (int i = 0; i < Grid1.Rows.Count; i++)
-            {
-                total += Double.Parse(Grid1.Rows[i].Cells[6].Text);
-                Grid1.Rows[i].Cells[6].Visible = false;
-            }
-            subtotalDisplay.Text = total.ToString("#.##");
-            string sqlTotal = "UPDATE ShoppingCart SET totalPrice = @total WHERE username = @username";
-            SqlCommand sqltot;
 
-            sqltot = new SqlCommand(sqlTotal, conn);
-            sqltot.Parameters.AddWithValue("@total", total);
-            sqltot.Parameters.AddWithValue("@username", Session["username"]);
+        //}
 
-            sqltot.ExecuteNonQuery();
-            Session["total"] = subtotalDisplay.Text;
+        //protected void confirmButton_Click(object sender, EventArgs e)
+        //{
+        //    confirmButton.Visible = false;
+        //    checkout.Visible = true;
+
+        //    double total = 0.0;
+
+        //    for (int i = 0; i < Grid1.Rows.Count; i++)
+        //    {
+        //        total += Double.Parse(Grid1.Rows[i].Cells[6].Text);
+        //        Grid1.Rows[i].Cells[6].Visible = false;
+        //    }
+        //    subtotalDisplay.Text = total.ToString("#.##");
+        //    string sqlTotal = "UPDATE ShoppingCart SET totalPrice = @total WHERE username = @username";
+        //    SqlCommand sqltot;
+
+        //    sqltot = new SqlCommand(sqlTotal, conn);
+        //    sqltot.Parameters.AddWithValue("@total", total);
+        //    sqltot.Parameters.AddWithValue("@username", Session["username"]);
+
+        //    sqltot.ExecuteNonQuery();
+        //    Session["total"] = subtotalDisplay.Text;
         }
     }
 }
