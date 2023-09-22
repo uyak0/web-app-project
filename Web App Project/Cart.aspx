@@ -73,7 +73,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:GridView ID="GridView1" CssClass="CartGrid" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ShowHeaderWhenEmpty="True" DataKeyNames="MenuID">
+                            <asp:GridView ID="Grid1" CssClass="CartGrid" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="Grid1_SelectedIndexChanged" ShowHeaderWhenEmpty="True" DataKeyNames="MenuID">
                                 <Columns>
                                     <asp:TemplateField HeaderText="ID" SortExpression="MenuID">
                                         <ItemTemplate>
@@ -98,7 +98,7 @@
                                 </Columns>
                                 <EmptyDataTemplate>
                                     <div align="center">
-                                        There is nothing in your cart yet. <a href="/Keju/KejuHome.aspx">Start Shopping!</a>
+                                        There is nothing in your cart yet. <a href="Web App Project\Menu.aspx">Start Ordering!</a>
                                     </div>
                                 </EmptyDataTemplate>
 

@@ -26,7 +26,7 @@ namespace Drinkables.Cart
         }
 
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void Grid1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -48,7 +48,7 @@ namespace Drinkables.Cart
 
             sqlOr.ExecuteNonQuery();
 
-            foreach (GridViewRow row in GridView1.Rows)
+            foreach (GridViewRow row in Grid1.Rows)
             {
                 Label MenuID = (Label)row.Cells[0].FindControl("Label1");
                 Label qty = (Label)row.Cells[5].FindControl("Label2");
@@ -81,10 +81,10 @@ namespace Drinkables.Cart
 
             double total = 0.0;
 
-            for (int i = 0; i < GridView1.Rows.Count; i++)
+            for (int i = 0; i < Grid1.Rows.Count; i++)
             {
-                total += Double.Parse(GridView1.Rows[i].Cells[6].Text);
-                GridView1.Rows[i].Cells[6].Visible = false;
+                total += Double.Parse(Grid1.Rows[i].Cells[6].Text);
+                Grid1.Rows[i].Cells[6].Visible = false;
             }
             subtotalDisplay.Text = total.ToString("#.##");
             string sqlTotal = "UPDATE ShoppingCart SET totalPrice = @total WHERE username = @username";
