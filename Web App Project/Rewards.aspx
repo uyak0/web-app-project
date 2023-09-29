@@ -37,7 +37,7 @@
             <p>Earn points with every purchase and unlock exciting rewards with Drinkables!</p>
             <p class="auto-style2">Signing up is fast and easy!</p>
             <p>
-                <asp:Button ID="Register" runat="server" Text="Join Now" OnClick="BtnRegisterRedirect" />
+                <asp:Button ID="Register" runat="server" Text="Join Now" OnClick="BtnRegisterRedirect" EnableViewState="False" />
                 <asp:Button ID="Login" runat="server" Text="Sign In" OnClick="BtnLoginRedirect" />
             </p>
         </section>
@@ -67,7 +67,7 @@
             <h2>Redeem Rewards</h2>
             <p>Log in to your account to view your points balance and redeem rewards.</p>
             <p>
-                <asp:Button ID="Redeem" runat="server" Text="Redeem Here" OnClick="BtnRedemRedirect" />
+                <asp:Button ID="Redeem" runat="server" Text="Redeem Here" OnClick="BtnRedeemRedirect" />
             </p>
         </section>
 

@@ -4,67 +4,66 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <style>
-        /* Add your custom styles here */
-        body {
+    body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
+    }
 
-header {
+    header {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-}
+    }
 
-.container {
+    .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
+    }
 
-h1 {
+    h1 {
     margin-top: 0;
-}
+    }
 
-.reward-button {
+    .reward-button {
     background-color: #333;
     color: white;
     padding: 10px 20px;
     margin: 10px;
     border: none;
     cursor: pointer;
-}
+    }
 
     .reward-button:hover {
         background-color: #555;
     }
 
-form {
+    form {
     margin-top: 20px;
-}
+    }
 
-label {
+    label {
     font-weight: bold;
-}
+    }
 
-input[type="number"] {
+    input[type="number"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-}
+    }
 
-button {
+    button {
     background-color: #333;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-}
+    }
 
     button:hover {
         background-color: #555;
