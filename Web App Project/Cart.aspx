@@ -1,43 +1,51 @@
-﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="Web_App_Project.Cart" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NavBar.Master" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="Web_App_Project.Cart" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content4" ContentPlaceHolderID="title" runat="server">
+    Cart
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<asp:Content ID="Content5" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" href="main.css"/>
     <title>Cart</title>
-</head>
-<body>
-    <form id="form1" runat="server">
+</asp:Content>
 
-        <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-            <div>
-                <table>
-                    <tr style="border-style:solid">
-                        <td style="font-size: 140%; background-color: white;">Order Cart</td>
-                        <td style="font-size: 100%">&nbsp;</td>
-                    </tr>
-                    <asp:DataList runat="server" ID="DataList2" DataSourceID="SqlDataSource1" RepeatLayout="Flow" RepeatDirection="Horizontal"></asp:DataList><asp:SqlDataSource runat="server" ID="SqlDataSource1"></asp:SqlDataSource>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div>
+            <table>
+                <tr style="border-style:solid">
+                    <td style="font-size: 140%; background-color: white;">Order Cart</td>
+                    <td style="font-size: 100%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="background:white; color: black; font-style:italic; padding: 10px">
+                        <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Cart] WHERE [CartId] = @CartId" InsertCommand="INSERT INTO [Cart] ([CartId], [Price]) VALUES (@CartId, @Price)" SelectCommand="SELECT * FROM [Cart]" UpdateCommand="UPDATE [Cart] SET [Price] = @Price WHERE [CartId] = @CartId" ID="ctl24">
+                            <DeleteParameters>
+                                <asp:Parameter Name="CartId" Type="String"></asp:Parameter>
+                            </DeleteParameters>
+                            <InsertParameters>
+                                <asp:Parameter Name="CartId" Type="String"></asp:Parameter>
+                                <asp:Parameter Name="Price" Type="Decimal"></asp:Parameter>
+                            </InsertParameters>
+                            <UpdateParameters>
+                                <asp:Parameter Name="Price" Type="Decimal"></asp:Parameter>
+                                <asp:Parameter Name="CartId" Type="String"></asp:Parameter>
+                            </UpdateParameters>
+                        </asp:SqlDataSource>
+                        
+                        <asp:GridView runat="server" ID="ctlCart" AllowSorting="True" DataSourceID="ctl24"></asp:GridView>
+
+                    </td>
                     
-                    <tr>
-                        <td>                            
-
-<%--                            <EmptyDataTemplate>
-                                <div align="center" style="padding: 50px;background-color: cornflowerblue; font-size: 140%;">
-                                    Your Cart is Empty. <a href="Menu.aspx">Start Ordering!</a>
-                                </div>
-                            </EmptyDataTemplate>--%>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="navbar">
-                <a href="Home.aspx"> Home </a> 
-                <a href="Menu.aspx"> Menu </a> 
-                <a href="Rewards.aspx"> Rewards </a>
-                <a href="Account.aspx"> Account </a>
-            </div>
-        </asp:Content>
-    </form>
-</body>
-</html>
+                </tr>
+                
+                    
+            </table>
+            <asp:Button runat="server" onclick="btnSubmitAll_Click" Text="Submit"></asp:Button>
+        </div>
+        <div class="navbar">
+            <a href="Home.aspx"> Home </a> 
+            <a href="Menu.aspx"> Menu </a> 
+            <a href="Rewards.aspx"> Rewards </a>
+            <a href="Account.aspx"> Account </a>
+        </div>
+</asp:Content>

@@ -76,6 +76,7 @@ namespace Web_App_Project
 
         protected void btnBackMenu_Click(object sender, EventArgs e)
         {
+            int i = 0;
             decimal totalPrice = decimal.Parse(Request.QueryString["Price"]);
             decimal totalOrderPrice = decimal.Parse(Request.QueryString["totalOrderPrice"]);
             // Get the selected customization options and add their prices to the total price
@@ -106,7 +107,7 @@ namespace Web_App_Project
                     totalPrice += customizationPrice;
                 }
             }
-
+            i += 1;
             totalOrderPrice += totalPrice;
 
             int counter = 0;
@@ -114,7 +115,7 @@ namespace Web_App_Project
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using (SqlCommand command = new SqlCommand("INSERT INTO CART (CartId, Price) VALUES ('" + (counter + 1) + "', '" + totalPrice + "')", connection)) 
+                using (SqlCommand command = new SqlCommand("INSERT INTO CART (CartId, Price) VALUES ('" + (counter + i) + "', '" + totalPrice + "')", connection)) 
                 { 
                     command.Parameters.Add(new SqlParameter("CartId", (counter + 1)));
                     command.Parameters.Add(new SqlParameter("Price", totalPrice));

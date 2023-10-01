@@ -7,16 +7,31 @@ using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
 
-namespace Drinkables.Cart
+namespace Web_App_Project
 {
-    public partial class AddToCart : System.Web.UI.Page
+    public partial class Cart : System.Web.UI.Page
     {
-        /*public string GetConnectionString()
+        protected void DataList2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            return System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionStrings:ConnectionString"].ConnectionString;
 
-        }*/
-        SqlConnection conn;
-        string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        }
+        protected void btnSubmitAll_Click(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            string query = "DELETE FROM CART";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            Response.Redirect("Success.aspx");
+        }
+
     }
 }

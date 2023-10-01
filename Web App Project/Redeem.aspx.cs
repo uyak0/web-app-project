@@ -18,7 +18,7 @@ namespace Web_App_Project
             if(!Page.IsPostBack)
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = ConfigurationManager.ConnectionStrings[].ToString();
+                //con.ConnectionString = ConfigurationManager.ConnectionStrings[].ToString();
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = "Select Points from [aspnet_Users]";
@@ -39,7 +39,7 @@ namespace Web_App_Project
                     }
                 }
                 table.Append("</table" );
-                PlaceHolder1.Controls.Add(new Literal { Text = table.ToString() });
+                //PlaceHolder1.Controls.Add(new Literal { Text = table.ToString() });
                 rd.Close();
                 
             }

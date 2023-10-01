@@ -258,6 +258,7 @@
     <Content Include="Rewards.aspx" />
     <Content Include="Rewards.css" />
     <Content Include="RewardsLoggedIn.aspx" />
+    <Content Include="Success.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -296,8 +297,6 @@
     <Compile Include="Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cart.cs" />
-    <Compile Include="DataField.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -347,6 +346,13 @@
     </Compile>
     <Compile Include="RewardsLoggedIn.aspx.designer.cs">
       <DependentUpon>RewardsLoggedIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
