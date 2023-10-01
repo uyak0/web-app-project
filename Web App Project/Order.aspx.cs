@@ -5,6 +5,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Security.Policy;
+using System.Diagnostics;
+using System.Configuration;
 
 namespace Web_App_Project
 {
@@ -66,9 +70,6 @@ namespace Web_App_Project
                         }
                     }
 
-
-
-
                 }
             }
         }
@@ -108,9 +109,20 @@ namespace Web_App_Project
 
             totalOrderPrice += totalPrice;
 
+            int counter = 0;
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand("INSERT INTO CART (CartId, Price) VALUES ('" + (counter + 1) + "', '" + totalPrice + "')", connection)) 
+                { 
+                    command.Parameters.Add(new SqlParameter("CartId", (counter + 1)));
+                    command.Parameters.Add(new SqlParameter("Price", totalPrice));
+                    command.ExecuteNonQuery();
+                }
+            }
             Response.Redirect("Menu.aspx?totalPrice=" + totalPrice + "&totalOrderPrice=" + totalOrderPrice);
         }
-
 
         protected void Grid1_SelectedIndexChanged(object sender, EventArgs e)
         {

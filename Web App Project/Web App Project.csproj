@@ -223,10 +223,6 @@
     <Content Include="App_Data\Menu_log.ldf">
       <DependentUpon>Menu.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\Orders.mdf" />
-    <Content Include="App_Data\Orders_log.ldf">
-      <DependentUpon>Orders.mdf</DependentUpon>
-    </Content>
     <Content Include="Assets\americano.PNG" />
     <Content Include="Assets\blacktea.PNG" />
     <Content Include="Assets\brownsugarlatte.PNG" />
@@ -249,7 +245,6 @@
     <Content Include="Assets\order.PNG" />
     <Content Include="Assets\strawberryfrappe.PNG" />
     <Content Include="Cart.aspx" />
-    <Content Include="Cart.css" />
     <Content Include="Home.aspx" />
     <Content Include="Home.css" />
     <Content Include="main.css" />
