@@ -9,7 +9,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-    <img class="logo" src="Assets/drinkables-logo.png" />
+    <a href="../Home.aspx"><img class="logo" src="../Assets/drinkables-logo.png" /></a>
     <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatLayout="Flow" RepeatDirection="Horizontal"  CssClass="drinkContainer">
         <ItemTemplate>
             <div class="latte">

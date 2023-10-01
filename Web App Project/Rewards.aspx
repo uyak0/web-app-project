@@ -4,31 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <link href="Rewards.css" rel="stylesheet" />
-    <style type="text/css">
-        /* Define CSS styles for table */
-        #cartTable table, th, td {
-            border: 2px groove blue;
-            color: #1A1110;
-            background: white;
-            font-family: 'Bricolage Grotesque', sans-serif;
-        }
-
-        /* Apply a common font family */
-        * {
-            font-family: sans-serif;
-        }
-
-        /* Define styles for tables */
-        table {
-            text-align: center;
-            width: 100%;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <header>
-        <img src="Assets/drinkables-logo.png" alt="Drinkables logo" style="margin:auto; height: 102px; display: block;" />
-    <h1 style="display: block;">Rewards</h1>
+        <a href="../Home.aspx"><img class="logo" src="../Assets/drinkables-logo.png" style="margin:auto; height: 102px; display: block;"/></a> 
+        <h1>Rewards</h1>
     </header>
     <div class="container">
         <!-- Section: Introduction -->

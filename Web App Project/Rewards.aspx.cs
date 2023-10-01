@@ -15,12 +15,12 @@ namespace Web_App_Project
         }
         protected void BtnRegisterRedirect(object sender, EventArgs e)
         {
-            Response.Redirect("SignUp.aspx");
+            Response.Redirect("~/Account/SignUp.aspx");
         }
 
         protected void BtnLoginRedirect(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            Response.Redirect("~/Account/Login.aspx");
         }
 
         protected void BtnRedeemRedirect(object sender, EventArgs e)

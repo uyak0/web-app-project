@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="grid">
-        <img class="logo" src="../Assets/drinkables-logo.png" />
+        <a href="../Home.aspx"><img class="logo" src="../Assets/drinkables-logo.png" /></a>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
         <asp:Login ID="Login1" runat="server" 
             BackColor="#666666" 

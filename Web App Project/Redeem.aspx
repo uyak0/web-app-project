@@ -1,81 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NavBar.Master" AutoEventWireup="true" CodeBehind="Rewards.aspx.cs" Inherits="Web_App_Project.Rewards1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NavBar.Master" AutoEventWireup="true" CodeBehind="Rewards.aspx.cs" Inherits="Web_App_Project.Redeem" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Reward Redemption
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
-    <style>
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    }
-
-    header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    }
-
-    .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-    margin-top: 0;
-    }
-
-    .reward-button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    cursor: pointer;
-    }
-
-    .reward-button:hover {
-        background-color: #555;
-    }
-
-    form {
-    margin-top: 20px;
-    }
-
-    label {
-    font-weight: bold;
-    }
-
-    input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    }
-
-    button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #555;
-    }
-
-    </style>
+    <link href="Redeem.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <header>
-    <img src="Assets/drinkables-logo.png" alt="Drinkables logo" style="margin:auto; height: 102px; display: block;" />
-<h1 style="display: block;">Rewards</h1>
-</header>
+        <a href="../Home.aspx"><img class="logo" src="../Assets/drinkables-logo.png" style="margin:auto; height: 102px; display: block;"/></a> 
+        <h1>Rewards</h1>
+    </header>
     <div class="container">
         <h2>Select a Reward</h2>
         <button class="reward-button" data-reward-name="2" data-points-required="100">30% Off</button>

@@ -7,7 +7,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="grid">
-        <img class="logo" src="../Assets/drinkables-logo.png" />
+        <a href="../Home.aspx"><img class="logo" src="../Assets/drinkables-logo.png" /></a>
         <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" 
             BackColor="#666666" 
             BorderColor="#E6E2D8" 
