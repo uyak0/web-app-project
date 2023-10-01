@@ -11,34 +11,25 @@ namespace Web_App_Project
 {
 
 
-    public partial class Rewards1
+    public partial class Redeem
     {
 
         /// <summary>
-        /// Register control.
+        /// PlaceHolder1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Register;
+        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder1;
 
         /// <summary>
-        /// Login control.
+        /// PlaceHolder2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Login;
-
-        /// <summary>
-        /// Redeem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Redeem;
+        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder2;
     }
 }
