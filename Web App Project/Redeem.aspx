@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NavBar.Master" AutoEventWireup="true" CodeBehind="Rewards.aspx.cs" Inherits="Web_App_Project.Redeem" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Reward Redemption
 </asp:Content>
@@ -17,15 +19,20 @@
         <button class="reward-button" data-reward-name="10" data-points-required="300">Free Drink</button>
 
         <div>
-            <p>Your Available Points: <span id="pointsBalance">152</span></p>
+            <p>Your Available Points: 
+                <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+                <span id="pointsBalance"> </span>
+            </p>
         </div>
 
         <div>
-            <p>Voucher Code: <span id="voucherCode"></span></p>
+            <p>Voucher Code: <span id="voucherCode">
+                <asp:PlaceHolder ID="PlaceHolder2" runat="server"></asp:PlaceHolder>
+                </span></p>
         </div>
     </div>
     <script>
-        const pointsBalance = 
+        const pointsBalance = @Request.Form["points"]
 
         // JavaScript to handle button clicks and redemption logic
         const rewardButtons = document.querySelectorAll('.reward-button');

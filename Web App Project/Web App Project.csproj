@@ -91,10 +91,6 @@
     <Content Include="App_Data\Orders_log.ldf">
       <DependentUpon>Orders.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\Rewards.mdf" />
-    <Content Include="App_Data\Rewards_log.ldf">
-      <DependentUpon>Rewards.mdf</DependentUpon>
-    </Content>
     <Content Include="Assets\americano.PNG" />
     <Content Include="Assets\blacktea.PNG" />
     <Content Include="Assets\brownsugarlatte.PNG" />
