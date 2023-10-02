@@ -13,82 +13,82 @@
         <h1>Rewards</h1>
     </header>
     <script>
-        pointsBalance = 250; // Initial points balance
-        // JavaScript to handle button clicks and redemption logic
-        const rewardButtons = document.querySelectorAll('.reward-button');
-        const pointsBalanceSpan = document.getElementById('pointsBalance');
-        const voucherCodeSpan = document.getElementById('voucherCode');
-        const off30 = document.getElementById('off30');
-        const off60 = document.getElementById('off60');
-        const off100 = document.getElementById('off100');
-        document.getElementById("pointsBalanceOutput").innerHTML = pointsBalance;
-        document.getElementById("voucherCodeOutput").innerHTML = voucherCode;
-        // Event listener for reward button clicks
-        rewardButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const rewardName = button.getAttribute('data-reward-name');
-                const RewardID = button.getAttribute('data-reward-id');
-                const pointsRequired = parseInt(button.getAttribute('data-points-required'));
+        document.addEventListener('DOMContentLoaded', function () {
+            const pointsBalanceSpan = document.getElementById('pointsBalance');
+            const voucherCodeSpan = document.getElementById('voucherCode');
 
-                // Function to subtract points from balance
-                function subtractPoints(pointsRequired) {
-                    if (pointsRequired <= currentPointsBalance) {
-                        pointsbalance = pointsBalance - pointsRequired;
-                        pointsBalanceSpan.textContent = pointsBalance;
-                    }
-                    else {
-                        alert('Insufficient points for redemption.');
-                    }
+            let pointsBalance = 250;
+
+            function updatePointsDisplay() {
+                pointsBalanceSpan.textContent = pointsBalance;
+            }
+
+            function generateRandomCode() {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                const codeLength = 6;
+                let code = '';
+                for (let i = 0; i < codeLength; i++) {
+                    const randomIndex = Math.floor(Math.random() * characters.length);
+                    code += characters.charAt(randomIndex);
                 }
+                return code;
+            }
 
-                // Function to generate a random code
-                function generateRandomCode(rewardID) {
-                    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-                    const codeLength = 6;
-                    let code = '';
-                    for (let i = 0; i < codeLength; i++) {
-                        const randomIndex = Math.floor(Math.random() * characters.length);
-                        code += characters.charAt(randomIndex);
-                    }
+            function redeemDiscount(discountPercentage) {
+                if (pointsBalance >= 100) {
+                    const discountAmount = Math.round((discountPercentage / 100) * 100);
+                    pointsBalance -= 100;
 
-                    const voucherCode = `${rewardID}-${code}`;
-                    return voucherCode;
+                    // Generate a voucher code based on the discount
+                    const voucherCode = 'DISCOUNT' + discountAmount + generateRandomCode();
+                    voucherCodeSpan.textContent = voucherCode;
+
+                    updatePointsDisplay();
+                } else {
+                    alert('Insufficient points for redemption.');
                 }
-                
-                // Add click event listeners to each button
-                off30.addEventListener('click', function () {
-                    subtractPoints(100);
-                    generateRandomCode(2);
-                });
-                off60.addEventListener('click', function () {
-                    subtractPoints(200);
-                    generateRandomCode(8);
-                });
-                off100.addEventListener('click', function () {
-                    subtractPoints(300);
-                    generateRandomCode(10);
-                });
+            }
+
+            document.getElementById('discount30').addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the button's default form submission behavior
+                redeemDiscount(30);
             });
+
+            document.getElementById('discount60').addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the button's default form submission behavior
+                redeemDiscount(60);
+            });
+
+            document.getElementById('freeDrink').addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the button's default form submission behavior
+                if (pointsBalance >= 50) {
+                    pointsBalance -= 50;
+                    voucherCodeSpan.textContent = 'FREEDRINK' + generateRandomCode();
+                    updatePointsDisplay();
+                } else {
+                    alert('Insufficient points for redemption.');
+                }
+            });
+
+            updatePointsDisplay();
         });
-        
     </script>
 
     <div class="container">
         <h2>Select a Reward</h2>
-        <button id="off30" class="reward-button" data-reward-name="2" data-points-required="100">30% Off</button>
-        <button id="off60" class="reward-button" data-reward-name="8" data-points-required="200">60% Off</button>
-        <button id="off100" class="reward-button" data-reward-name="10" data-points-required="300">Free Drink</button>
+        <button id="discount30" class="reward-button" data-reward-name="2" data-points-required="100">30% Off</button>
+        <button id="discount60" class="reward-button" data-reward-name="8" data-points-required="200">60% Off</button>
+        <button id="freeDrink" class="reward-button" data-reward-name="10" data-points-required="300">Free Drink</button>
 
         <div>
             <p1>Your Available Points: 
-                <p id="pointsBalanceOutput"></p>
+                <p id="pointsBalance">250</p>
             </p1>
         </div>
 
         <div>
-            <p1>Voucher Code: 
-                <p id="voucherCodeOutput"></p>
-            </p1>
+            <p>Voucher Code: </p>
+                <p id="voucherCode">N/A</p>
         </div>
     </div>
     
