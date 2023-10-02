@@ -56,13 +56,8 @@
 
             document.getElementById('discount60').addEventListener('click', function (e) {
                 e.preventDefault(); // Prevent the button's default form submission behavior
-                redeemDiscount(60);
-            });
-
-            document.getElementById('freeDrink').addEventListener('click', function (e) {
-                e.preventDefault(); // Prevent the button's default form submission behavior
-                if (pointsBalance >= 50) {
-                    pointsBalance -= 50;
+                if (pointsBalance >= 200) {
+                    pointsBalance -= 200;
                     voucherCodeSpan.textContent = 'FREEDRINK' + generateRandomCode();
                     updatePointsDisplay();
                 } else {
@@ -70,19 +65,29 @@
                 }
             });
 
+            document.getElementById('freeDrink').addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the button's default form submission behavior
+                if (pointsBalance >= 300) {
+                    pointsBalance -= 300;
+                    voucherCodeSpan.textContent = 'FREEDRINK' + generateRandomCode();
+                    updatePointsDisplay();
+                } else {
+                    alert('Insufficient points for redemption.');
+                }
+            });
             updatePointsDisplay();
         });
     </script>
 
     <div class="container">
         <h2>Select a Reward</h2>
-        <button id="discount30" class="reward-button" data-reward-name="2" data-points-required="100">30% Off</button>
-        <button id="discount60" class="reward-button" data-reward-name="8" data-points-required="200">60% Off</button>
-        <button id="freeDrink" class="reward-button" data-reward-name="10" data-points-required="300">Free Drink</button>
+        <button id="discount30" class="reward-button"">30% Off</button>
+        <button id="discount60" class="reward-button">60% Off</button>
+        <button id="freeDrink" class="reward-button">Free Drink</button>
 
         <div>
             <p1>Your Available Points: 
-                <p id="pointsBalance">250</p>
+                <p id="pointsBalance">780</p>
             </p1>
         </div>
 
