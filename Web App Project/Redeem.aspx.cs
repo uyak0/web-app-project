@@ -12,37 +12,38 @@ namespace Web_App_Project
 {
     public partial class Redeem : System.Web.UI.Page
     {
-        StringBuilder table = new StringBuilder();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
-            {
-                SqlConnection con = new SqlConnection();
-                //con.ConnectionString = ConfigurationManager.ConnectionStrings[].ToString();
-                con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "Select Points from [aspnet_Users]";
-                cmd.Connection = con;
-                SqlDataReader rd = cmd.ExecuteReader();
-                table.Append("<table border='1'>");
-                table.Append("<tr><th>User's Points</th>");
-                table.Append("</tr>");
+            string connectionString = "MembersConnectionString";
 
-                if(rd.HasRows)
+            // Replace with the user ID you want to retrieve points for
+            string userId = "@UserId";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    if(rd.Read())
+                    connection.Open();
+
+                    // Query to retrieve points for a specific user
+                    string query = "SELECT Points FROM UserPoints WHERE UserId = @UserId";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        table.Append("<tr>");
-                        table.Append("<td>" + rd[0] + "</td>");
-                        table.Append("<td>" + rd[1] + "</td>");
-                        table.Append("</tr>");
+                        command.Parameters.AddWithValue("@UserId", userId);
+
+                        // Execute the query and get the points balance
+                        int pointsBalance = Convert.ToInt32(command.ExecuteScalar());
+
+                        Console.WriteLine("Points Balance: " + pointsBalance);
                     }
                 }
-                table.Append("</table" );
-                //PlaceHolder1.Controls.Add(new Literal { Text = table.ToString() });
-                rd.Close();
-                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
+
     }
 }
